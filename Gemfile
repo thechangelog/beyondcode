@@ -4,4 +4,5 @@ source "https://rubygems.org"
 gem "middleman-core"
 gem "middleman-cli"
 gem "middleman-sprockets"
-gem "middleman-livereload"
+
+gem "pry"
