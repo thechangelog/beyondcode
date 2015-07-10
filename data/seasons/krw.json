@@ -1,0 +1,103 @@
+{
+  "title": "Keep Ruby Weird",
+  "filmed_on": "2014-11-15",
+  "published_on": "2015-07-06",
+  "website_url": "http://keeprubyweird.com",
+  "extras": [
+    {
+      "name": "Trailer",
+      "youtube_id": "IioZX53AIgY"
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Codeship",
+      "url": "https://codeship.com"
+    },
+    {
+      "name": "Toptal",
+      "url": "https://toptal.com"
+    },
+    {
+      "name": "Runscope",
+      "url": "https://runscope.com"
+    }
+  ],
+  "episodes": [
+    {
+      "title": "Richard Schneeman",
+      "youtube_id": "0p8vEzPitW8",
+      "links": [
+        {
+          "name": "Website",
+          "url": "http://www.schneems.com"
+        }
+      ]
+    },
+    {
+      "title": "Nickolas Means",
+      "youtube_id": "uMzCcnG42LM",
+      "links": []
+    },
+    {
+      "title": "Terence Lee",
+      "youtube_id": "V2_CnJHQNQM",
+      "links": []
+    },
+    {
+      "title": "Scott Hamilton",
+      "youtube_id": "s6-x85sATOE",
+      "links": []
+    },
+    {
+      "title": "Ryan Rauh",
+      "youtube_id": "JP7VgeNN7FU",
+      "links": []
+    },
+    {
+      "title": "Nola Stowe",
+      "youtube_id": "CPUL9YqU8KA",
+      "links": []
+    },
+    {
+      "title": "Nick Zadrozny",
+      "youtube_id": "x96ndYsPvUo",
+      "links": []
+    },
+    {
+      "title": "Kyle Aleshire",
+      "youtube_id": "A68XtjrtDFc",
+      "links": []
+    },
+    {
+      "title": "Joanne Cheng",
+      "youtube_id": "zjTq-_ACWUY",
+      "links": []
+    },
+    {
+      "title": "Jeremy Flores",
+      "youtube_id": "fgnMVCJNFc0",
+      "links": []
+    },
+    {
+      "title": "Hays Prevost",
+      "youtube_id": "KImPK6I2rWM",
+      "links": []
+    },
+    {
+      "title": "Davy Stevenson",
+      "youtube_id": "oV-xl4Gn1Ys",
+      "links": []
+    },
+    {
+      "title": "Carol Nichols",
+      "youtube_id": "-g9vlI43H-w",
+      "links": []
+    },
+    {
+      "title": "Andrew Moursund",
+      "youtube_id": "q7mb0lDr9uU",
+      "links": []
+    }
+  ]
+}
