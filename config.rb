@@ -1,6 +1,13 @@
-###
-# Page options, layouts, aliases and proxies
-###
+require_relative "lib/episode"
+require_relative "lib/season"
+
+Season.published(data).each do |season|
+  proxy season.path, "season.html", locals: {season: season}
+
+  season.episodes.each do |episode|
+    proxy episode.path, "episode.html", locals: {episode: episode}
+  end
+end
 
 # Per-page layout changes:
 #

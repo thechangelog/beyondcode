@@ -1,0 +1,12 @@
+---
+title: Beyond Code Season
+---
+
+<div class="welcome">
+  <h2><%= link_to season.title, season.slug %></h2>
+  <ul>
+    <% season.episodes.each do |episode| %>
+      <li><%= link_to episode.title, episode.path %></li>
+    <% end %>
+  </ul>
+</div>
