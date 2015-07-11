@@ -1,27 +1,39 @@
 class Season
   def self.all data
-    data.seasons.map { |d| new d }
+    data.seasons.keys.map { |k| Season.new k, data.seasons[k] }
   end
 
   def self.published data
     all(data).select { |season| season.published? }
   end
 
-  def initialize tuple
-    @slug = tuple.first
-    @data = tuple.last
+  def initialize slug, data
+    @data = data
+    @slug = @data.slug || slug
   end
 
   def episodes
     @episodes ||= @data.episodes.map { |d| Episode.new d, self }
   end
 
+  def filmed_on
+    @filmed_on ||= Date.parse @data.filmed_on
+  end
+
+  def number
+    @data.season_number
+  end
+
   def path
     "/#{slug}"
   end
 
+  def published_on
+    @published_on ||= Date.parse @data.published_on
+  end
+
   def published? as_of: Date.today
-    Date.parse(@data.published_on) < as_of
+     published_on < as_of
   end
 
   def slug
