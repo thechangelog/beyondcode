@@ -17,7 +17,11 @@ class Season
   end
 
   def episodes
-    @episodes ||= @data.episodes.map { |d| Episode.new d, self }
+    @episodes ||= @data.episodes.map { |e| Episode.new e, self }
+  end
+
+  def extras
+    @extras ||= @data.extras.map { |e| Extra.new e, self }
   end
 
   def filmed_on
@@ -42,6 +46,10 @@ class Season
 
   def slug
     @data.slug || @slug
+  end
+
+  def thumbnail_url
+    extras.first.try :thumbnail_url
   end
 
   def method_missing method_name, *args
