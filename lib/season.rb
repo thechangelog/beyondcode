@@ -1,4 +1,6 @@
-class Season
+require_relative "film"
+
+class Season < Film
   def self.all data
     data.seasons.keys.map { |k| Season.new k, data.seasons[k] }.sort
   end
@@ -46,13 +48,5 @@ class Season
 
   def slug
     @data.slug || @slug
-  end
-
-  def thumbnail_url
-    extras.first.try :thumbnail_url
-  end
-
-  def method_missing method_name, *args
-    @data.send method_name, args
   end
 end

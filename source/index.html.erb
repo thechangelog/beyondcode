@@ -3,7 +3,9 @@
     <% Season.published(data).each do |season| %>
       <li>
         <h3><%= link_to season.title, season.path %></h3>
-        <img src="<%= season.thumbnail_url %>" alt="<%= season.title %>">
+        <a href="<%= season.path %>" title="View Season <%= season.number %>">
+          <img src="<%= season.thumbnail_url %>" alt="<%= season.title %>">
+        </a>
       </li>
     <% end %>
   </ol>

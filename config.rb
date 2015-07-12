@@ -1,5 +1,4 @@
 require_relative "lib/season"
-require_relative "lib/film"
 require_relative "lib/episode"
 require_relative "lib/extra"
 
@@ -15,17 +14,8 @@ page "/*.xml", layout: false
 page "/*.json", layout: false
 page "/*.txt", layout: false
 
-
-###
-# Helpers
-###
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+end
 
 # Build-specific configuration
 configure :build do

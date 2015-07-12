@@ -2,7 +2,8 @@
 
 <div class="hero">
   <div class="content">
-    <img src="<%= season.thumbnail_url %>" alt="<%= season.title %>">
+    <%= partial "embed", locals: {id: season.youtube_id} %>
+
     <% if season.sponsors.any? %>
       <p>Sponsor Love! Thank you to our gracious sponsors for supporting Season <%= season.number %>.</p>
       <div class="sponsors row">
