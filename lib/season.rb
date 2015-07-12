@@ -1,6 +1,6 @@
 class Season
   def self.all data
-    data.seasons.keys.map { |k| Season.new k, data.seasons[k] }
+    data.seasons.keys.map { |k| Season.new k, data.seasons[k] }.sort
   end
 
   def self.published data
@@ -10,6 +10,10 @@ class Season
   def initialize slug, data
     @data = data
     @slug = @data.slug || slug
+  end
+
+  def <=> other
+    number <=> other.number
   end
 
   def episodes
