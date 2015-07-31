@@ -1,0 +1,12 @@
+.sponsors {
+  background: $dark-grey;
+  padding: $gutter;
+  text-align: center;
+
+  p {
+    color: $light-grey;
+    font-style: italic;
+    font-weight: 200;
+    letter-spacing: .05em;
+  }
+}

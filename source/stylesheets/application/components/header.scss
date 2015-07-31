@@ -1,0 +1,27 @@
+.site_header {
+  background: $white;
+  font-family: $display;
+  padding: $gutter*2;
+
+  &-logo {
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+
+    h1 {
+      font-size: 3em;
+      letter-spacing: .025em;
+
+      &,
+      & a {
+        color: $black;
+      }
+    }
+
+    h2 {
+      color: $light-grey;
+      font-size: 1em;
+      letter-spacing: .11em;
+    }
+  }
+}

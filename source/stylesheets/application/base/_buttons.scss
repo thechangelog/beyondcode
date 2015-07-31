@@ -1,0 +1,32 @@
+.button {
+  @extend %button-large;
+  @include appearance(none);
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  // white-space: nowrap;
+  &:focus {
+    outline: none;
+  }
+}
+
+
+.share-button {
+  @extend .button;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  &-facebook {
+    background: $facebook;
+    &:hover {
+      background: darken($facebook, 10%);
+    }
+  }
+  &-twitter {
+    background: $twitter;
+    &:hover {
+      background: darken($twitter, 10%);
+    }
+  }
+}

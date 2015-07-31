@@ -34,6 +34,10 @@ class Season < Film
     @data.season_number
   end
 
+  def location
+    @data.location
+  end
+
   def path
     "/#{slug}"
   end

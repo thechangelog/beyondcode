@@ -7,18 +7,23 @@
 
     <title><%= yield_content(:title) || "Beyond Code" %></title>
 
+    <script src="//use.typekit.net/ijy4jab.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
     <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
   </head>
 
   <body class="<%= page_classes %>">
-    <header class="row">
-      <div class="col">
+    <header class="site_header">
+      <nav class="site_header-logo">
         <h1><a href="/" title="Beyond Code">Beyond Code</a></h1>
         <h2>A Changelog Films Production</h2>
-      </div>
+      </nav>
     </header>
 
     <%= yield %>
+
+    <%= partial "footer" %>
+    <%= javascript_include_tag :all %>
   </body>
 </html>

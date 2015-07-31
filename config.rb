@@ -2,6 +2,8 @@ require_relative "lib/season"
 require_relative "lib/episode"
 require_relative "lib/extra"
 
+sprockets.append_path File.join "#{root}", "bower_components"
+
 Season.published(app.data).each do |season|
   proxy season.path, "season.html", locals: {season: season}
 

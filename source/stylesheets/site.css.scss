@@ -1,124 +1,33 @@
-@charset "utf-8";
-@import "normalize";
+// require_self
 
-@media (min-width: 30em) {
-  .row { width: 100%; display: table; table-layout: fixed; }
-  .col { display: table-cell; }
+@import 'bourbon/app/assets/stylesheets/bourbon';
+@import 'neat/app/assets/stylesheets/neat';
+@import 'application/base/base';
+@import 'application/components/all';
+@import 'application/layouts/all';
+
+html {
+  background: $base-background-color;
+  height: 100%;
 }
 
 body {
-  background: #EEE;
+  background: $base-background-color;
+  min-height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-  background: white;
-  padding: 15px 0;
-  h1 {
-    text-align: center;
-    margin-bottom: 0;
-    a, a:visited {
-      color: black;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  }
-  h2 {
-    text-align: center;
-    font-size: .85em;
-    font-weight: lighter;
-    text-transform: uppercase;
-    color: black;
-    margin-top: 0;
-  }
+.main-content {
+  flex: 1 0 auto;
 }
 
-.hero {
-  background: white;
-  .content {
-    max-width: 800px;
+.ie6,
+.ie7,
+.ie8 {
+  body {
+    width: 960px !important;
     margin: 0 auto;
-    text-align: center;
-  }
-  p {
-    color: #888;
-    font-size: .85em;
-    font-style: italic;
-  }
-  .sponsors {
-    padding: 15px 0;
-  }
-}
-
-.embed-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.videos {
-  margin: 15px 0;
-
-  ol {
-    list-style: none;
-    font-size: 0px;
-    margin-left: -3%;
-  }
-
-  li {
-    display: inline-block;
-    padding: 10px;
-    margin: 0 0 2% 2%;
-    width: 30.83%;
-    background: #fff;
-    border: 1px solid #ddd;
-    font-size: 16px;
-    font-size: 1rem;
-    vertical-align: top;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 0 0 10px;
-    }
-
-    h3 {
-      margin: 0 0 5px;
-    }
-
-    p {
-      font-size: .9em;
-      line-height: 1.5em;
-      color: #999;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .videos {
-    ol {
-      margin-left: 0;
-    }
-    li {
-      width: 100% !important;
-      margin: 0 0 20px;
-
-      a {
-        display: block;
-      }
-    }
   }
 }

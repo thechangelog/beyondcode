@@ -1,0 +1,10 @@
+@include keyframes(pulse-glow-green) {
+  0%, 100% {
+    box-shadow: 0 0 0 $green;
+    color: $base-accent-color;
+  }
+  50% {
+    box-shadow: 0 0 20px $green;
+    color: $green;
+  }
+}

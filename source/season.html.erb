@@ -2,29 +2,53 @@
 
 <div class="hero">
   <div class="content">
-    <%= partial "embed", locals: {id: season.youtube_id} %>
+    <%#= partial "embed", locals: {id: season.youtube_id} %>
+
+    <div class="season-banner">
+      <a href="<%= season.path %>" title="View Season <%= season.number %>">
+        <header class="season-banner-header">
+          <p class="season-number">0<%= season.number %></p>
+          <h1><%= season.title %></h1>
+          <h2><%= season.location %> (2014)</h2>
+        </header>
+      </a>
+    </div>
 
     <% if season.sponsors.any? %>
-      <p>Sponsor Love! Thank you to our gracious sponsors for supporting Season <%= season.number %>.</p>
-      <div class="sponsors row">
-        <% season.sponsors.each do |sponsor| %>
-          <div class="col">
-            <%= link_to sponsor.name, sponsor.url %>
-          </div>
-        <% end %>
+      <div class="sponsors">
+        <p>Sponsor Love! Thank you to our gracious sponsors for supporting Season <%= season.number %>.</p>
+        <div class="sponsors-wrap">
+          <% season.sponsors.each do |sponsor| %>
+            <div class="sponsors-item">
+              <%= link_to sponsor.name, sponsor.url %>
+            </div>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>
 </div>
 
-<div class="videos">
-  <ol>
-    <% season.episodes.each do |episode| %>
-      <li>
-        <a href="<%= episode.path %>">
-          <img src="<%= episode.thumbnail_url %>" alt="<%= episode.title %>">
-        </a>
-      </li>
-    <% end %>
-  </ol>
-</div>
+<ol class="video-list">
+  <% season.episodes.each do |episode| %>
+    <li class="video-list-item">
+      <a href="<%= episode.path %>">
+        <img src="<%= episode.thumbnail_url %>" alt="<%= episode.title %>">
+      </a>
+    </li>
+  <% end %>
+</ol>
+
+<section class="ctas">
+  <% Season.published(data).each do |season| %>
+    <article class="season-banner">
+      <a href="<%= season.path %>" title="View Season <%= season.number %>">
+        <header class="season-banner-header">
+          <p class="season-number">0<%= season.number %></p>
+          <h1><%= season.title %></h1>
+          <h2><%= season.location %> (2014)</h2>
+        </header>
+      </a>
+    </article>
+  <% end %>
+</section>

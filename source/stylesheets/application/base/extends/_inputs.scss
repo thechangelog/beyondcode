@@ -1,0 +1,37 @@
+%base-input {
+  @include transition(border-color);
+  @include appearance(none);
+  background-color: white;
+  border-radius: $form-border-radius;
+  border: 1px solid $form-border-color;
+  box-shadow: $form-box-shadow;
+  box-sizing: border-box;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+  font-weight: 500;
+  margin-bottom: 0; // TODO: or, $base-spacing / 2
+  padding: $base-spacing / 2;
+  width: 100%;
+  color: $base-font-color;
+  &:hover {
+    border-color: $form-border-color-hover;
+  }
+  &:focus {
+    border-color: $form-border-color-focus;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+  @include placeholder {
+    color: $medium-grey;
+  }
+  // &.error, &.fallback-error {
+  //   background: $red6;
+  //   border-color: $red4;
+  //   color: $red3;
+  // }
+  // &.alert {
+  //   background: $yellow5;
+  //   border-color: $yellow2;
+  //   color: $yellow2;
+  // }
+}

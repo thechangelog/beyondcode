@@ -1,0 +1,30 @@
+.site_footer {
+  @include clearfix;
+  border-bottom: 1px solid $base-border-color;
+  display: table;
+  width: 100%;
+
+  &-form,
+  &-copyright {
+    display: table-cell;
+  }
+
+  &-form {
+    padding: $gutter*2 $gutter;
+    width: 70%;
+  }
+
+  &-copyright {
+    border-left: 1px solid $base-border-color;
+    padding: $gutter;
+    vertical-align: middle;
+    width: 30%;
+
+    p {
+      font-size: .9em;
+      font-weight: 200;
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

@@ -1,12 +1,13 @@
-<div class="videos">
-  <ol>
-    <% Season.published(data).each do |season| %>
-      <li>
-        <h3><%= link_to season.title, season.path %></h3>
-        <a href="<%= season.path %>" title="View Season <%= season.number %>">
-          <img src="<%= season.thumbnail_url %>" alt="<%= season.title %>">
-        </a>
-      </li>
-    <% end %>
-  </ol>
-</div>
+<section class="seasons">
+  <% Season.published(data).each do |season| %>
+    <article class="season-banner">
+      <a href="<%= season.path %>" title="View Season <%= season.number %>">
+        <header class="season-banner-header">
+          <p class="season-number">0<%= season.number %></p>
+          <h1><%= season.title %></h1>
+          <h2><%= season.location %> (2014)</h2>
+        </header>
+      </a>
+    </article>
+  <% end %>
+</section>

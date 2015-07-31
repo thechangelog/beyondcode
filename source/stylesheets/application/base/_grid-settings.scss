@@ -1,0 +1,25 @@
+@import 'neat/app/assets/stylesheets/neat-helpers'; // or '../neat/neat-helpers' when not in Rails
+
+$app-width: 1088; // The largest of the inner app contents
+
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: em($app-width);
+
+// Breakpoints
+$tiny-screen-size: em(405);
+$medium-screen-size: em(680);
+$large-screen-size: em(860);
+
+$tiny-screen: new-breakpoint(max-width $tiny-screen-size 4);
+$small-screen: new-breakpoint(max-width $medium-screen-size 4);
+$medium-screen: new-breakpoint(min-width $medium-screen-size max-width $large-screen-size 4);
+
+$tight-dashboard-screen: new-breakpoint(min-width $tiny-screen-size max-width '740px' 4);
+
+$tablet-screen: new-breakpoint(min-width $tiny-screen-size max-width $large-screen-size 4);
+$medium-screen-down: new-breakpoint(max-width $large-screen-size 4);
+$large-screen-up: new-breakpoint(min-width $large-screen-size 12);
+
+$short-screen: new-breakpoint(max-height 350px);

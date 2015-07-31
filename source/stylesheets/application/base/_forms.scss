@@ -1,0 +1,94 @@
+fieldset {
+  border: none;
+  margin: 0 0 ($base-spacing / 2) 0;
+  padding: $base-spacing 0;
+  legend {
+    border-bottom: 1px solid $base-accent-color;
+    color: $base-accent-color;
+    display: block;
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-bottom: ($gutter/2);
+    width: 100%;
+  }
+}
+
+input,
+.input, // For fake inputs!
+.form-share-button,
+label,
+select {
+  display: block;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+}
+
+label {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: $base-spacing / 4;
+  &.required:after { content: '*'; }
+  abbr { display: none; }
+}
+
+textarea,
+#{$all-text-inputs},
+.input, // For fake inputs!
+.form-share-button,
+select[multiple=multiple] {
+  @extend %base-input;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.simple-form-submit {
+  margin-top: $gutter;
+}
+
+input[type='submit'] {
+  @extend %button-large;
+  @include appearance(none);
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  margin-top: ($gutter / 2);
+  // white-space: nowrap;
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type='search'] {
+  @include appearance(none);
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: inline;
+  margin-right: $base-spacing / 4;
+}
+
+select {
+  margin-bottom: $base-spacing;
+  max-width: 100%;
+  width: 100%;
+
+  @include appearance(none);
+  background-color: $white;
+  background-position: 85% center;
+  background-position: right 20px center;
+  border: 1px solid $form-border-color;
+  border-radius: $base-border-radius;
+  color: $base-font-color;
+  padding: 13px 15px 12px 10px;
+  position: relative;
+  &:focus {
+    border-color: $form-border-color-focus;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+}

@@ -1,0 +1,9 @@
+.ctas {
+  @include clearfix;
+  border-top: 1px solid $medium-grey;
+  margin-top: -1px;
+
+  > *:first-child {
+    border-right: 1px solid $medium-grey;
+  }
+}

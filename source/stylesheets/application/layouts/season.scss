@@ -1,0 +1,16 @@
+.video-list {
+  @include clearfix;
+  background: $darker-grey;
+  border-top: 1px solid $base-border-color;
+
+  &-item {
+    border-bottom: 1px solid $base-border-color;
+    border-right: 1px solid $base-border-color;
+    float: left;
+    width: 33.3333%;
+
+    &:nth-child(3n+3) {
+      border-right: 0;
+    }
+  }
+}

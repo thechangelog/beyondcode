@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.1)
+    activesupport (4.2.3)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -9,7 +9,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     atomic (1.1.99)
-    backports (3.6.4)
+    backports (3.6.5)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
@@ -73,7 +73,7 @@ GEM
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    sass (3.4.15)
+    sass (3.4.16)
     slop (3.6.0)
     sprockets (2.12.4)
       hike (~> 1.2)
@@ -106,4 +106,4 @@ DEPENDENCIES
   pry
 
 BUNDLED WITH
-   1.10.5
+   1.10.6
