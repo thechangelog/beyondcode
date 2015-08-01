@@ -2,30 +2,15 @@
 
 <div class="hero">
   <div class="content">
-    <%#= partial "embed", locals: {id: season.youtube_id} %>
-
-    <div class="season-banner">
-      <a href="<%= season.path %>" title="View Season <%= season.number %>">
-        <header class="season-banner-header">
-          <p class="season-number">0<%= season.number %></p>
-          <h1><%= season.title %></h1>
-          <h2><%= season.location %> (2014)</h2>
-        </header>
-      </a>
+    <div class="season-banner season-banner-<%= season.number %>">
+      <header class="season-banner-header">
+        <p class="season-number">0<%= season.number %></p>
+        <h1><%= season.title %></h1>
+        <h2><%= season.location %> (2014)</h2>
+      </header>
     </div>
 
-    <% if season.sponsors.any? %>
-      <div class="sponsors">
-        <p>Sponsor Love! Thank you to our gracious sponsors for supporting Season <%= season.number %>.</p>
-        <div class="sponsors-wrap">
-          <% season.sponsors.each do |sponsor| %>
-            <div class="sponsors-item">
-              <%= link_to sponsor.name, sponsor.url %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
+    <%= partial "sponsors", locals: {season: season} %>
   </div>
 </div>
 
@@ -33,7 +18,8 @@
   <% season.episodes.each do |episode| %>
     <li class="video-list-item">
       <a href="<%= episode.path %>">
-        <img src="<%= episode.thumbnail_url %>" alt="<%= episode.title %>">
+        <h2><%= episode.title %></h2>
+        <img src="/images/season-<%= season.number %>-<%= episode.slug %>.jpg" alt="<%= episode.title %>">
       </a>
     </li>
   <% end %>
@@ -41,7 +27,7 @@
 
 <section class="ctas">
   <% Season.published(data).each do |season| %>
-    <article class="season-banner">
+    <article class="season-banner season-banner-<%= season.number %>">
       <a href="<%= season.path %>" title="View Season <%= season.number %>">
         <header class="season-banner-header">
           <p class="season-number">0<%= season.number %></p>

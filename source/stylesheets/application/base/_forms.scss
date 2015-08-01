@@ -38,6 +38,15 @@ textarea,
 .form-share-button,
 select[multiple=multiple] {
   @extend %base-input;
+  background: none;
+  border: 0;
+  font-size: 1.75em;
+  padding: 0;
+
+  @include placeholder {
+    color: $light-grey;
+    font-weight: 200;
+  }
 }
 
 textarea {

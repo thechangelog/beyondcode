@@ -1,7 +1,7 @@
 <section class="seasons">
   <% Season.published(data).each do |season| %>
-    <article class="season-banner">
-      <a href="<%= season.path %>" title="View Season <%= season.number %>">
+    <article class="season-banner season-banner-<%= season.number %>">
+      <a class="season-banner-link" href="<%= season.path %>" title="View Season <%= season.number %>">
         <header class="season-banner-header">
           <p class="season-number">0<%= season.number %></p>
           <h1><%= season.title %></h1>

@@ -1,11 +1,10 @@
 .site_header {
   background: $white;
   font-family: $display;
-  padding: $gutter*2;
+  padding: $gutter*2 0;
 
   &-logo {
     margin: 0 auto;
-    width: 400px;
     text-align: center;
 
     h1 {
