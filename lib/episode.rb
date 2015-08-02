@@ -13,5 +13,10 @@ class Episode < Film
     @data.title.downcase.gsub " ", "-"
   end
 
+  def as_json *args
+    {
+      title: title,
+      path: path
+    }
   end
 end

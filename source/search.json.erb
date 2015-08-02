@@ -1,0 +1,1 @@
+<%= Season.published(data).inject([]) { |memo, season| memo += season.episodes }.to_json %>
