@@ -4,6 +4,10 @@ class Film
     @season = season
   end
 
+  def path
+    "/#{slug}"
+  end
+
   def thumbnail_url version: "hqdefault"
     "//img.youtube.com/vi/#{youtube_id}/#{version}.jpg"
   end

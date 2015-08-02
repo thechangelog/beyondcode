@@ -38,10 +38,6 @@ class Season < Film
     @data.location
   end
 
-  def path
-    "/#{slug}"
-  end
-
   def published_on
     @published_on ||= Date.parse @data.published_on
   end
