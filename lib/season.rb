@@ -49,4 +49,8 @@ class Season < Film
   def slug
     @data.slug || @slug
   end
+
+  def year
+    filmed_on.year
+  end
 end
