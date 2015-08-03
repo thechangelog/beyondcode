@@ -1,9 +1,18 @@
 .ctas {
   @include clearfix;
+  display: table;
   border-top: 1px solid $medium-grey;
   margin-top: -1px;
+  width: 100%;
 
   > *:first-child {
     border-right: 1px solid $medium-grey;
+    display: table-cell;
+    width: 50%;
+  }
+
+  .season-banner {
+    display: table-cell !important;
+    float: none;
   }
 }

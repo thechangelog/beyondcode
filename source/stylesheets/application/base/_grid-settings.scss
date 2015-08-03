@@ -11,10 +11,12 @@ $max-width: em($app-width);
 $tiny-screen-size: em(405);
 $medium-screen-size: em(680);
 $large-screen-size: em(860);
+$huge-screen-size: em(1280);
 
 $tiny-screen: new-breakpoint(max-width $tiny-screen-size 4);
 $small-screen: new-breakpoint(max-width $medium-screen-size 4);
 $medium-screen: new-breakpoint(min-width $medium-screen-size max-width $large-screen-size 4);
+$medium-screen-up: new-breakpoint(min-width $medium-screen-size 12);
 
 $tight-dashboard-screen: new-breakpoint(min-width $tiny-screen-size max-width '740px' 4);
 

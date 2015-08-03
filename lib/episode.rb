@@ -19,4 +19,5 @@ class Episode < Film
       path: path
     }
   end
+
 end

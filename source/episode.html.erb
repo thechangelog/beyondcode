@@ -1,13 +1,25 @@
 <% content_for :title, "Beyond Code Season #{season.number} – #{season.title} – #{episode.title}" %>
 
-<div class="welcome">
+<article class="episode">
   <%= partial "embed", locals: {id: episode.youtube_id} %>
   <%= partial "sponsors", locals: {season: season} %>
-  <h2><%= link_to episode.title, episode.path %></h2>
-</div>
+  <div class="episode_info">
+    <div class="episode_info-wrap">
+      <div class="episode_info-meta">
+        <h2><%= link_to episode.title, episode.path %></h2>
+        <p class="episode-twitter_link"><%= link_to "@#{episode.twitter}", "http://twitter.com/#{episode.twitter}" %></p>
+      </div>
+      <div class="episode_info-links">
+        <% episode.links.each do |link| %>
+          <%= link_to link.title, link.url %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</article>
 
 <section class="ctas">
-  <article class="season-banner season-banner-<%= season.number %>">
+  <article class="season-banner season-banner--<%= season.number %>">
     <a href="<%= season.path %>" title="View Season <%= season.number %>">
       <header class="season-banner-header">
         <p class="season-number">0<%= season.number %></p>
@@ -16,7 +28,7 @@
       </header>
     </a>
   </article>
-  <article class="season-banner">
+  <article class="season-banner season-banner--view_all">
     <a href="/" title="View All Seasons">
       <h1>View All Seasons</h1>
     </a>

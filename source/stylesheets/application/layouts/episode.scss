@@ -1,0 +1,25 @@
+.episode_info {
+  background: $black;
+  border-top: 1px solid $base-border-color;
+
+  &-wrap {
+    @include clearfix;
+    padding: $gutter $gutter*2 $gutter*2;
+  }
+
+  &-meta,
+  &-links {
+    float: left;
+    width: 50%;
+  }
+
+  &-links {
+    @extend %subtle-text;
+  }
+}
+
+.episode {
+  &-twitter_link {
+    @extend %subtle-text;
+  }
+}

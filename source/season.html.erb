@@ -1,33 +1,32 @@
 <% content_for :title, "Beyond Code Season #{season.number} – #{season.title}" %>
 
-<div class="hero">
-  <div class="content">
-    <div class="season-banner season-banner-<%= season.number %>">
-      <header class="season-banner-header">
-        <p class="season-number">0<%= season.number %></p>
-        <h1><%= season.title %></h1>
-        <h2><%= season.location %> (<%= season.year %>)</h2>
-      </header>
-    </div>
-
-    <%= partial "sponsors", locals: {season: season} %>
-  </div>
+<div class="season-banner season-banner--<%= season.number %> season-banner--large">
+  <header class="season-banner-header">
+    <p class="season-number">0<%= season.number %></p>
+    <h1><%= season.title %></h1>
+    <h2><%= season.location %> (<%= season.year %>)</h2>
+  </header>
 </div>
 
-<ol class="video-list">
+<%= partial "sponsors", locals: {season: season} %>
+
+<ol class="episode_list">
   <% season.episodes.each do |episode| %>
-    <li class="video-list-item">
+    <li class="episode_list-item">
       <a href="<%= episode.path %>">
-        <h2><%= episode.title %></h2>
-        <img src="<%= episode.image_path %>" alt="<%= episode.title %>">
+        <img class="episode_list-item-image" src="<%= episode.image_path %>" alt="<%= episode.title %>">
       </a>
+      <div class="episode_list-item-info">
+        <h2><%= link_to episode.title, episode.path %></h2>
+        <p class="episode-twitter_link"><%= link_to "@#{episode.twitter}", "http://twitter.com/#{episode.twitter}" %></p>
+      </div>
     </li>
   <% end %>
 </ol>
 
 <section class="ctas">
   <% Season.published(data).each do |season| %>
-    <article class="season-banner season-banner-<%= season.number %>">
+    <article class="season-banner season-banner--<%= season.number %>">
       <a href="<%= season.path %>" title="View Season <%= season.number %>">
         <header class="season-banner-header">
           <p class="season-number">0<%= season.number %></p>

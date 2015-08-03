@@ -1,0 +1,62 @@
+.season {
+  &-banner {
+    @include linear-gradient(to right, $darker-grey, $dark-grey);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid $base-border-color;
+    padding: $gutter*4 $gutter*2;
+    position: relative;
+
+    &--large {
+      padding: $gutter*6 $gutter*2;
+    }
+
+    &--view_all {
+      padding: 0 $gutter;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    @for $i from 1 through 20 {
+      &--#{$i} { background-image: url("/images/season-#{$i}/banner.jpg"); }
+    }
+
+    &--1,
+    &--3,
+    &--5,
+    &--7,
+    &--9 {
+      text-align: right;
+      .season-number { @include position(absolute, 50% (-$gutter) null auto); }
+    }
+
+    &-link {
+      @include position(absolute, 0);
+      z-index: 2;
+    }
+
+    &-header {
+      position: relative;
+      z-index: 1;
+
+      h1,
+      h2 {
+        position: relative;
+        z-index: 2;
+      }
+
+      h1 { font-size: 3em; }
+      h2 { @extend %subtle-text; }
+    }
+  }
+
+  &-number {
+    @include position(absolute, 50% null null (-$gutter));
+    color: $dark-grey;
+    font-family: $display;
+    font-size: 244px;
+    line-height: 1em;
+    margin: -122px 0 0;
+  }
+}

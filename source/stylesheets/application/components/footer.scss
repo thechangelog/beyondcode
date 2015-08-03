@@ -1,6 +1,5 @@
 .site_footer {
   @include clearfix;
-  border-bottom: 1px solid $base-border-color;
   display: table;
   width: 100%;
 
@@ -10,7 +9,7 @@
   }
 
   &-form {
-    padding: $gutter*2 $gutter;
+    padding: $gutter*2 $gutter $gutter*2 $gutter*2;
     width: 70%;
 
     h3 {
@@ -22,8 +21,16 @@
   &-copyright {
     border-left: 1px solid $base-border-color;
     padding: $gutter;
+    position: relative;
     vertical-align: middle;
     width: 30%;
+
+    &:before {
+      @include position(absolute, null null -1px -10px);
+      @include size(20px 1px);
+      border-bottom: 1px solid $base-border-color;
+      content: "";
+    }
 
     p {
       font-size: .9em;

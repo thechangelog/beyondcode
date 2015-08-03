@@ -4,7 +4,9 @@
     <div class="sponsors-wrap">
       <% season.sponsors.each do |sponsor| %>
         <div class="sponsors-item">
-          <%= link_to sponsor.name, sponsor.url %>
+          <% link_to sponsor.url do %>
+            <img class="sponsors-item-image" src="/images/sponsors/<%= sponsor.name.downcase.gsub " ", "-" %>.png" alt="<%= sponsor.name %>">
+          <% end %>
         </div>
       <% end %>
     </div>
