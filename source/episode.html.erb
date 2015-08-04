@@ -1,0 +1,8 @@
+<% content_for :title, "Beyond Code Season #{season.number} – #{season.title} – #{episode.title}" %>
+
+<%= partial "episode", locals: { episode: episode, parent: "episode" } %>
+
+<section class="ctas">
+  <%= partial "cta", locals: { season: season } %>
+  <%= partial "cta_all" %>
+</section>
