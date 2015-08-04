@@ -5,12 +5,21 @@
   &-wrap {
     @include clearfix;
     padding: $gutter $gutter*2 $gutter*2;
+
+    @include media($small-screen) {
+      padding: $gutter $gutter $gutter*2;
+    }
   }
 
   &-meta,
   &-links {
     float: left;
     width: 50%;
+
+    @include media($small-screen) {
+      float: none;
+      width: 100%;
+    }
   }
 
   &-links {

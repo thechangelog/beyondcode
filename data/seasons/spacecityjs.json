@@ -12,5 +12,94 @@
   "sponsors": [
   ],
   "episodes": [
+    {
+      "title": "Richard Schneeman",
+      "twitter": "schneems",
+      "youtube_id": "0p8vEzPitW8",
+      "links": [
+        {
+          "title": "Website",
+          "url": "http://www.schneems.com"
+        }
+      ]
+    },
+    {
+      "title": "Nickolas Means",
+      "twitter": "nmeans",
+      "youtube_id": "uMzCcnG42LM",
+      "links": []
+    },
+    {
+      "title": "Terence Lee",
+      "twitter": "hone02",
+      "youtube_id": "V2_CnJHQNQM",
+      "links": []
+    },
+    {
+      "title": "Scott Hamilton",
+      "twitter": "greeneggs614",
+      "youtube_id": "s6-x85sATOE",
+      "links": []
+    },
+    {
+      "title": "Ryan Rauh",
+      "twitter": "rauhryan",
+      "youtube_id": "JP7VgeNN7FU",
+      "links": []
+    },
+    {
+      "title": "Nola Stowe",
+      "twitter": "rubygeek",
+      "youtube_id": "CPUL9YqU8KA",
+      "links": []
+    },
+    {
+      "title": "Nick Zadrozny",
+      "twitter": "nz_",
+      "youtube_id": "x96ndYsPvUo",
+      "links": []
+    },
+    {
+      "title": "Kyle Aleshire",
+      "twitter": "kjaleshire",
+      "youtube_id": "A68XtjrtDFc",
+      "links": []
+    },
+    {
+      "title": "Joanne Cheng",
+      "twitter": "joannecheng",
+      "youtube_id": "zjTq-_ACWUY",
+      "links": []
+    },
+    {
+      "title": "Jeremy Flores",
+      "twitter": "_jnf",
+      "youtube_id": "fgnMVCJNFc0",
+      "links": []
+    },
+    {
+      "title": "Hays Prevost",
+      "twitter": "hays_prevost",
+      "youtube_id": "KImPK6I2rWM",
+      "links": []
+    },
+    {
+      "title": "Davy Stevenson",
+      "twitter": "davystevenson",
+      "youtube_id": "oV-xl4Gn1Ys",
+      "links": []
+    },
+    {
+      "title": "Carol Nichols",
+      "twitter": "carols10cents",
+      "youtube_id": "-g9vlI43H-w",
+      "links": []
+    },
+    {
+      "title": "Andrew Moursund",
+      "twitter": "carolusiv",
+      "youtube_id": "q7mb0lDr9uU",
+      "links": []
+    }
   ]
 }

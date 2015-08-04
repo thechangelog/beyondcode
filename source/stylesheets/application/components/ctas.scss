@@ -7,14 +7,31 @@
 
   > *:first-child {
     border-right: 1px solid $medium-grey;
-    display: table-cell;
-    width: 50%;
+
+    @include media($medium-screen-down) {
+      border-right: 0;
+    }
   }
 
   .season-banner {
-    display: table-cell !important;
+    display: table-cell;
     float: none;
     padding-left: $gutter*2 !important;
     padding-right: $gutter*2 !important;
+    width: 50%;
+
+    @include media($medium-screen-down) {
+      width: 100%;
+      display: block !important;
+    }
+
+    @include media($small-screen) {
+      padding-left: $gutter !important;
+      padding-right: $gutter !important;
+    }
+
+    &--view_all {
+      padding: $gutter*2;
+    }
   }
 }

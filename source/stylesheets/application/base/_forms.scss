@@ -80,24 +80,3 @@ input[type='radio'] {
   display: inline;
   margin-right: $base-spacing / 4;
 }
-
-select {
-  margin-bottom: $base-spacing;
-  max-width: 100%;
-  width: 100%;
-
-  @include appearance(none);
-  background-color: $white;
-  background-position: 85% center;
-  background-position: right 20px center;
-  border: 1px solid $form-border-color;
-  border-radius: $base-border-radius;
-  color: $base-font-color;
-  padding: 13px 15px 12px 10px;
-  position: relative;
-  &:focus {
-    border-color: $form-border-color-focus;
-    box-shadow: $form-box-shadow-focus;
-    outline: none;
-  }
-}

@@ -6,13 +6,27 @@
     background-position: center;
     background-repeat: no-repeat;
     border-bottom: 1px solid $base-border-color;
+    overflow: hidden;
     padding: $gutter*4 $gutter*2;
     padding-left: $percentage;
     position: relative;
 
+    @include media($medium-screen-down) {
+      padding-left: 0;
+    }
+
+    @include media($small-screen) {
+      padding: $gutter*3 $gutter*2;
+    }
+
     &--large {
       padding: $gutter*6 $gutter*2;
       padding-left: $percentage;
+
+      @include media($medium-screen-down) {
+        padding: $gutter*4 $gutter*2;
+        padding-left: $gutter*2;
+      }
     }
 
     &--view_all {
@@ -33,8 +47,16 @@
       padding-left: 0;
       padding-right: $percentage;
       text-align: right;
+
+      @include media($medium-screen-down) {
+        padding-right: 0;
+      }
+
       .season-number { @include position(absolute, 50% (-$gutter) null auto); }
-      .season-banner-play { @include position(absolute, 50% null null ($percentage + 5)); }
+
+      @include media($large-screen-up) {
+        .season-banner-play {@include position(absolute, 50% null null ($percentage + 5)); }
+      }
     }
 
     &-link {
@@ -45,6 +67,9 @@
     &-header {
       position: relative;
       z-index: 1;
+      @include media($medium-screen-down) {
+        text-align: center !important;
+      }
 
       h1,
       h2 {
@@ -57,11 +82,25 @@
     }
 
     &-play {
-      @include position(absolute, 50% ($percentage + 5) null auto);
-      @include transform(translateY(-50%));
-      padding-left: 80px;
-      text-align: left;
-      z-index: 3;
+      @include media($large-screen-up) {
+        @include position(absolute, 50% ($percentage + 5) null auto);
+        @include transform(translateY(-50%));
+        padding-left: 80px;
+        text-align: left;
+        z-index: 3;
+      }
+
+      @include media($medium-screen-down) {
+        @include position(relative, auto !important);
+        display: block;
+        padding: $gutter $gutter 0;
+        width: 100%;
+
+        h3,
+        p {
+          display: none;
+        }
+      }
 
       &-icon {
         @include position(absolute, 50% null null 0);
@@ -71,6 +110,11 @@
         display: block;
         margin-top: -40px;
         text-indent: -9999px;
+
+        @include media($medium-screen-down) {
+          @include position(relative, auto);
+          margin: 0 auto !important;
+        }
       }
 
       h3 {
@@ -92,5 +136,8 @@
     font-size: 244px;
     line-height: 1em;
     margin: -122px 0 0;
+    @include media($medium-screen-down) {
+      padding-right: 10%;
+    }
   }
 }

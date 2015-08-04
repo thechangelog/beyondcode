@@ -6,11 +6,20 @@
   &-form,
   &-copyright {
     display: table-cell;
+
+    @include media($small-screen) {
+      display: block;
+      width: 100% !important;
+    }
   }
 
   &-form {
     padding: $gutter*2 $gutter $gutter*2 $gutter*2;
     width: 70%;
+
+    @include media($small-screen) {
+      padding-left: $gutter;
+    }
 
     h3 {
       font-size: 1.25em;
@@ -30,6 +39,14 @@
       @include size(20px 1px);
       border-bottom: 1px solid $base-border-color;
       content: "";
+      @include media($small-screen) {
+        content: none;
+      }
+    }
+
+    @include media($small-screen) {
+      border-left: 0;
+      border-top: 1px solid $base-border-color;
     }
 
     p {
