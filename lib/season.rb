@@ -34,6 +34,10 @@ class Season < Film
     @data.season_number
   end
 
+  def number_with_padding padded_to=2
+    sprintf "%0#{padded_to}i", number
+  end
+
   def location
     @data.location
   end

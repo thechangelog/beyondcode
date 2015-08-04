@@ -2,7 +2,7 @@
 
 <div class="season-banner season-banner--<%= season.number %> season-banner--large">
   <header class="season-banner-header">
-    <p class="season-number">0<%= season.number %></p>
+    <p class="season-number"><%= season.number_with_padding %></p>
     <h1><%= season.title %></h1>
     <h2><%= season.location %> (<%= season.year %>)</h2>
     <% if season.episodes.any? %>
