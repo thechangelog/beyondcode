@@ -7,9 +7,9 @@
     <h2><%= season.location %> (<%= season.year %>)</h2>
     <% if season.episodes.any? %>
       <div class="season-banner-play">
-        <a href="<%= season.path %>" title="View Season Trailer" class="season-banner-play-icon">Play All</a>
-        <h3><a href="<%= season.path %>" title="Play All Videos">Play All</a></h3>
-        <p><a href="<%= season.path %>" title="View Season Trailer">or View Trailer</a></p>
+        <a href="#modal-1" title="View Season Trailer" class="season-banner-play-icon" rel="modal:open">Play All</a>
+        <h3><a href="#modal-1" title="Play All Videos" rel="modal:open">Play All</a></h3>
+        <p><a href="#modal-1" title="View Season Trailer" rel="modal:open">or View Trailer</a></p>
       </div>
     <% else %>
       <div class="season-banner-play season-banner-play--soon">
@@ -18,6 +18,8 @@
     <% end %>
   </header>
 </div>
+
+<div id="modal-1" style="display:none;"><%= partial "episode", locals: { episode: season.episodes.first, parent: "modal" } %></div>
 
 <%= partial "sponsors", locals: {season: season} %>
 

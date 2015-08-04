@@ -2,6 +2,11 @@
   background: $black;
   border-top: 1px solid $base-border-color;
 
+  .modal & {
+    @include linear-gradient(to right, $darker-grey, $dark-grey);
+    border-top: 0;
+  }
+
   &-wrap {
     @include clearfix;
     padding: $gutter $gutter*2 $gutter*2;
@@ -19,6 +24,12 @@
     @include media($small-screen) {
       float: none;
       width: 100%;
+    }
+  }
+
+  &-meta {
+    h2 {
+      font-size: 3em;
     }
   }
 

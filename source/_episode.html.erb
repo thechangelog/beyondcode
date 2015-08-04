@@ -1,8 +1,6 @@
-<% content_for :title, "Beyond Code Season #{season.number} – #{season.title} – #{episode.title}" %>
-
 <article class="episode">
   <%= partial "embed", locals: {id: episode.youtube_id} %>
-  <%= partial "sponsors", locals: {season: season} %>
+  <%= partial "sponsors", locals: {season: season} if parent == "season" %>
   <div class="episode_info">
     <div class="episode_info-wrap">
       <div class="episode_info-meta">
@@ -17,8 +15,3 @@
     </div>
   </div>
 </article>
-
-<section class="ctas">
-  <%= partial "cta", locals: { season: season } %>
-  <%= partial "cta_all" %>
-</section>
