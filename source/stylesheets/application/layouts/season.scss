@@ -29,7 +29,7 @@
       @include transform(translateY(3px));
       @include transition(all .2s $ease-in-out-quint .1s);
       background: url("/images/play-small.png") center no-repeat;
-      background-size: 25px 33px;
+      background-size: 20px 28px;
       content: "";
       display: block;
       opacity: 0;
