@@ -24,6 +24,12 @@
     <%= yield %>
 
     <%= partial "footer" %>
+    <div class="modal">
+      <div class="modal-inner">
+        <a rel="modal:close">Close</a>
+        <div class="modal-content"></div>
+      </div>
+    </div>
     <%= javascript_include_tag :all %>
   </body>
 </html>

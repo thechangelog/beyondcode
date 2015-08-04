@@ -1,1 +1,5 @@
-//= require_tree .
+//= require vanilla-modal
+
+(function() {
+  var modal = new VanillaModal();
+})();
