@@ -102,6 +102,10 @@
         }
       }
 
+      &--soon h3 {
+        display: block !important;
+      }
+
       &-icon {
         @include position(absolute, 50% null null 0);
         @include size(63px 81px);

@@ -5,11 +5,17 @@
     <p class="season-number">0<%= season.number %></p>
     <h1><%= season.title %></h1>
     <h2><%= season.location %> (<%= season.year %>)</h2>
-    <div class="season-banner-play">
-      <a href="<%= season.path %>" title="View Season Trailer" class="season-banner-play-icon">Play All</a>
-      <h3><a href="<%= season.path %>" title="Play All Videos">Play All</a></h3>
-      <p><a href="<%= season.path %>" title="View Season Trailer">or View Trailer</a></p>
-    </div>
+    <% if season.episodes.any? %>
+      <div class="season-banner-play">
+        <a href="<%= season.path %>" title="View Season Trailer" class="season-banner-play-icon">Play All</a>
+        <h3><a href="<%= season.path %>" title="Play All Videos">Play All</a></h3>
+        <p><a href="<%= season.path %>" title="View Season Trailer">or View Trailer</a></p>
+      </div>
+    <% else %>
+      <div class="season-banner-play season-banner-play--soon">
+        <h3>Coming Soon</h3>
+      </div>
+    <% end %>
   </header>
 </div>
 
