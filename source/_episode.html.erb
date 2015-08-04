@@ -1,6 +1,6 @@
 <article class="episode">
   <%= partial "embed", locals: {id: episode.youtube_id} %>
-  <%= partial "sponsors", locals: {season: season} if parent == "season" %>
+  <%= partial "sponsors", locals: {season: episode.season} unless parent == "modal" %>
   <div class="episode_info">
     <div class="episode_info-wrap">
       <div class="episode_info-meta">

@@ -1,4 +1,6 @@
 class Film
+  attr_reader :season
+
   def initialize data, season
     @data = data
     @season = season

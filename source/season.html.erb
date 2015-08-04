@@ -20,7 +20,7 @@
 </div>
 
 <% if season.episodes.any? %>
-  <div id="modal-1" style="display:none;"><%= partial "episode", locals: { episode: season.episodes.first, parent: "modal" } %></div>
+  <div id="modal-1" style="display:none;"><%= partial "episode", locals: {episode: season.episodes.first, parent: "modal"} %></div>
 <% end %>
 
 <%= partial "sponsors", locals: {season: season} %>
