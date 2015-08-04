@@ -8,7 +8,7 @@ Season.published(app.data).each do |season|
   proxy season.path, "season.html", locals: {season: season}
 
   season.episodes.each do |episode|
-    proxy episode.path, "episode.html", locals: {season: season, episode: episode}
+    proxy episode.path, "single.html", locals: {season: season, episode: episode}
   end
 end
 
