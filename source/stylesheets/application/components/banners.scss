@@ -1,4 +1,5 @@
 .season {
+  $percentage: 15%; // Used for positioning the titles and such
   &-banner {
     @include linear-gradient(to right, $darker-grey, $dark-grey);
     background-size: cover;
@@ -6,10 +7,12 @@
     background-repeat: no-repeat;
     border-bottom: 1px solid $base-border-color;
     padding: $gutter*4 $gutter*2;
+    padding-left: $percentage;
     position: relative;
 
     &--large {
       padding: $gutter*6 $gutter*2;
+      padding-left: $percentage;
     }
 
     &--view_all {
@@ -27,8 +30,11 @@
     &--5,
     &--7,
     &--9 {
+      padding-left: 0;
+      padding-right: $percentage;
       text-align: right;
       .season-number { @include position(absolute, 50% (-$gutter) null auto); }
+      .season-banner-play { @include position(absolute, 50% null null ($percentage + 5)); }
     }
 
     &-link {
@@ -48,6 +54,34 @@
 
       h1 { font-size: 3em; }
       h2 { @extend %subtle-text; }
+    }
+
+    &-play {
+      @include position(absolute, 50% ($percentage + 5) null auto);
+      @include transform(translateY(-50%));
+      padding-left: 80px;
+      text-align: left;
+      z-index: 3;
+
+      &-icon {
+        @include position(absolute, 50% null null 0);
+        @include size(63px 81px);
+        background: url("/images/play.png") center no-repeat;
+        background-size: 63px 81px;
+        display: block;
+        margin-top: -40px;
+        text-indent: -9999px;
+      }
+
+      h3 {
+        font-size: 2.5em;
+      }
+
+      p {
+        @extend %subtle-text;
+        font-size: .8em;
+        margin: 0;
+      }
     }
   }
 

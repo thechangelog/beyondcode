@@ -5,6 +5,11 @@
     <p class="season-number">0<%= season.number %></p>
     <h1><%= season.title %></h1>
     <h2><%= season.location %> (<%= season.year %>)</h2>
+    <div class="season-banner-play">
+      <a href="<%= season.path %>" title="View Season Trailer" class="season-banner-play-icon">Play All</a>
+      <h3><a href="<%= season.path %>" title="Play All Videos">Play All</a></h3>
+      <p><a href="<%= season.path %>" title="View Season Trailer">or View Trailer</a></p>
+    </div>
   </header>
 </div>
 
@@ -25,15 +30,14 @@
 </ol>
 
 <section class="ctas">
-  <% Season.published(data).each do |season| %>
-    <article class="season-banner season-banner--<%= season.number %>">
-      <a href="<%= season.path %>" title="View Season <%= season.number %>">
-        <header class="season-banner-header">
-          <p class="season-number">0<%= season.number %></p>
-          <h1><%= season.title %></h1>
-          <h2><%= season.location %> (<%= season.year %>)</h2>
-        </header>
-      </a>
-    </article>
+  <% if season.next >= 1 %>
+    <%= partial "cta", locals: { season: Season.published(data).last } %>
+  <% else %>
+    <%= partial "cta_all" %>
+  <% end %>
+  <% if season.prev >= 1 %>
+    <%= partial "cta", locals: { season: Season.published(data).first } %>
+  <% else %>
+    <%= partial "cta_all" %>
   <% end %>
 </section>

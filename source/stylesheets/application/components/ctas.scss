@@ -14,5 +14,7 @@
   .season-banner {
     display: table-cell !important;
     float: none;
+    padding-left: $gutter*2 !important;
+    padding-right: $gutter*2 !important;
   }
 }

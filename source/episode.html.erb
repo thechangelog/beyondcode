@@ -19,18 +19,6 @@
 </article>
 
 <section class="ctas">
-  <article class="season-banner season-banner--<%= season.number %>">
-    <a href="<%= season.path %>" title="View Season <%= season.number %>">
-      <header class="season-banner-header">
-        <p class="season-number">0<%= season.number %></p>
-        <h1><%= season.title %></h1>
-        <h2><%= season.location %> (<%= season.year %>)</h2>
-      </header>
-    </a>
-  </article>
-  <article class="season-banner season-banner--view_all">
-    <a href="/" title="View All Seasons">
-      <h1>View All Seasons</h1>
-    </a>
-  </article>
+  <%= partial "cta", locals: { season: season } %>
+  <%= partial "cta_all" %>
 </section>
