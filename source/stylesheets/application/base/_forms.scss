@@ -46,6 +46,7 @@ select[multiple=multiple] {
   @include placeholder {
     color: $light-grey;
     font-weight: 200;
+    opacity: 1;
   }
 }
 

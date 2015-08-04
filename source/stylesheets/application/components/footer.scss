@@ -25,6 +25,11 @@
       font-size: 1.25em;
       margin-bottom: 10px;
     }
+
+    &-email[type=email] {
+      background: url("/images/email.png") left center no-repeat;
+      padding-left: 40px;
+    }
   }
 
   &-copyright {

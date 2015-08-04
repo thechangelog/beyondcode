@@ -136,8 +136,16 @@
     font-size: 244px;
     line-height: 1em;
     margin: -122px 0 0;
+
     @include media($medium-screen-down) {
       padding-right: 10%;
+    }
+
+    @include media($small-screen) {
+      left: 0 !important;
+      right: 0 !important;
+      padding: 0 !important;
+      text-align: center;
     }
   }
 }

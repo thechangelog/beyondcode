@@ -23,6 +23,23 @@
       border-right: 0;
     }
 
+    &:after {
+      @include position(absolute, 20px 20px null null);
+      @include size(25px 33px);
+      @include transform(translateY(3px));
+      @include transition(all .2s $ease-in-out-quint .1s);
+      background: url("/images/play-small.png") center no-repeat;
+      background-size: 25px 33px;
+      content: "";
+      display: block;
+      opacity: 0;
+      pointer-events: none;
+    }
+    &:hover:after {
+      @include transform(translateY(0));
+      opacity: 1;
+    }
+
     &-info {
       @include position(absolute, null 0 0);
       @include transition(all .2s $ease-in-out-quint .1s);
