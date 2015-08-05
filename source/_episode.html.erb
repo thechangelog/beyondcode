@@ -1,5 +1,8 @@
 <article class="episode">
-  <%= partial "embed", locals: {id: episode.youtube_id} %>
+  <div class="embed-wrapper">
+    <div id="player" data-id="<%= episode.youtube_id %>"></div>
+  </div>
+
   <%= partial "sponsors", locals: {season: episode.season} unless parent == "modal" %>
   <div class="episode_info">
     <div class="episode_info-wrap">
