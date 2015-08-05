@@ -6,6 +6,12 @@
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
     <title><%= yield_content(:title) || "Beyond Code" %></title>
+    <meta content="<%= yield_content(:title) || 'Beyond Code' %>" property="og:title">
+    <meta content="<%= yield_content(:description) || 'A Changelog Films Production' %>" property="og:description">
+    <meta name="description" content="<%= yield_content(:description) || 'A Changelog Films Production' %>">
+    <meta content="Beyond Code" property="og:site_name">
+    <meta content="http://beyondcode.tv<%= current_page.url %>" property="og:url">
+    <meta content="<%= yield_content(:pull_image) || 'http://beyondcode.tv/images/share.jpg' %>" property="og:image">
 
     <script src="//use.typekit.net/ijy4jab.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
