@@ -4,6 +4,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="/images/favicon.ico">
 
     <title><%= yield_content(:title) || "Beyond Code" %></title>
     <meta content="<%= yield_content(:title) || 'Beyond Code' %>" property="og:title">
@@ -30,9 +31,10 @@
     <%= yield %>
 
     <%= partial "footer" %>
+
+    <!-- Modal Template -->
     <div class="modal">
       <div class="modal-inner">
-        <!-- <a rel="modal:close">Close</a> -->
         <div class="modal-content"></div>
       </div>
     </div>
