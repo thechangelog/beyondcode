@@ -2,7 +2,7 @@
 <% content_for :description, "Video interviews with #{season.title} attendees. A Changelog Films production." %>
 <% content_for :pull_image, "http://beyondcode.tv/images/season-#{season.number}/banner.jpg" %>
 
-<div class="season-banner season-banner--<%= season.number %> season-banner--large">
+<div class="season-banner season-banner--<%= season.number %> season-banner--large" data-src="<%= season.image_path %>" data-src-retina="<%= season.image_path_retina %>" data-src-bg>
   <header class="season-banner-header">
     <p class="season-number"><%= season.number_with_padding %></p>
     <h1><%= season.title %></h1>
@@ -30,13 +30,13 @@
 <ol class="episode_list">
   <% season.episodes.each do |episode| %>
     <li class="episode_list-item">
-      <a href="<%= episode.path %>">
-        <img class="episode_list-item-image" src="<%= episode.image_path %>" alt="<%= episode.title %>">
+      <a href="<%= episode.path %>" title="View Episode">
+        <img class="episode_list-item-image" src="/images/episode-blank.png" data-src="<%= episode.image_path %>" data-src-retina="<%= episode.image_path_retina %>" alt="<%= episode.title %>">
+        <div class="episode_list-item-info">
+          <h2><%= episode.title %></h2>
+          <p class="episode-twitter_link"><%= "@#{episode.twitter}" %></p>
+        </div>
       </a>
-      <div class="episode_list-item-info">
-        <h2><%= link_to episode.title, episode.path %></h2>
-        <p class="episode-twitter_link"><%= link_to "@#{episode.twitter}", "http://twitter.com/#{episode.twitter}" %></p>
-      </div>
     </li>
   <% end %>
 </ol>

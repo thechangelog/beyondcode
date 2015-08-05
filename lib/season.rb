@@ -30,6 +30,14 @@ class Season < Film
     @filmed_on ||= Date.parse @data.filmed_on
   end
 
+  def image_path
+    "/images/season-#{number}/banner.jpg"
+  end
+
+  def image_path_retina
+    "/images/season-#{number}/banner_2x.jpg"
+  end
+
   def number
     @data.season_number
   end
