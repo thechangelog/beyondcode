@@ -17,6 +17,9 @@ page "/*.json", layout: false
 page "/*.txt", layout: false
 
 helpers do
+  def template_name
+    current_page.source_file.relative_path.to_s.split(".").first
+  end
 end
 
 # Build-specific configuration
