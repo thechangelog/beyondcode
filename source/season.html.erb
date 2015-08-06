@@ -42,13 +42,14 @@
 </ol>
 
 <section class="ctas">
-  <% if season.next >= 1 %>
-    <%= partial "cta", locals: { season: Season.published(data).last } %>
+  <% if prev_season %>
+    <%= partial "cta", locals: {season: prev_season} %>
   <% else %>
     <%= partial "cta_all" %>
   <% end %>
-  <% if season.prev >= 1 %>
-    <%= partial "cta", locals: { season: Season.published(data).first } %>
+
+  <% if next_season %>
+    <%= partial "cta", locals: {season: next_season} %>
   <% else %>
     <%= partial "cta_all" %>
   <% end %>

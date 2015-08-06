@@ -1,11 +1,9 @@
 {
   "season_number": 3,
-  "title": "Gophercon",
+  "title": "GopherCon",
   "location": "Denver, Colorado",
-  "filmed_on": "2015-03-28",
+  "filmed_on": "2015-07-08",
   "published_on": "2015-07-06",
-  "next": 0,
-  "prev": 2,
   "website_url": "http://gophercon.com",
   "extras": [
   ],

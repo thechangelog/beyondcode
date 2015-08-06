@@ -4,11 +4,43 @@ require_relative "lib/extra"
 
 sprockets.append_path File.join "#{root}", "bower_components"
 
-Season.published(app.data).each do |season|
-  proxy season.path, "season.html", locals: {season: season}
+seasons = Season.published app.data
 
-  season.episodes.each do |episode|
-    proxy episode.path, "single.html", locals: {season: season, episode: episode}
+seasons.each_with_index do |season, index|
+  if index == 0
+    prev_season = nil
+  else
+    prev_season = seasons[index-1]
+  end
+
+  if index == seasons.length
+    next_season = nil
+  else
+    next_season = seasons[index+1]
+  end
+
+  proxy season.path, "season.html", locals: {
+    season: season,
+    prev_season: prev_season,
+    next_season: next_season
+  }
+
+  season.episodes.each_with_index do |episode, index|
+    # no beginning-of-array check here because we loop around
+    prev_episode = season.episodes[index-1]
+
+    if index == season.episodes.length
+      next_episode = season.episodes.first
+    else
+      next_episode = season.episodes[index+1]
+    end
+
+    proxy episode.path, "single.html", locals: {
+      season: season,
+      episode: episode,
+      prev_episode: prev_episode,
+      next_episode: next_episode
+    }
   end
 end
 
