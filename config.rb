@@ -32,6 +32,7 @@ seasons.each_with_index do |season, index|
     end
 
     proxy episode.path, "single.html", locals: {episode: episode}
+    proxy "#{episode.path}.json", "single.json", locals: {episode: episode}
   end
 end
 

@@ -13,7 +13,6 @@ class Episode < Film
     @data.title.downcase.gsub " ", "-"
   end
 
-  def as_json *args
   def prev_path
     prev_film.path if prev_film
   end
@@ -21,9 +20,21 @@ class Episode < Film
   def next_path
     next_film.path if next_film
   end
+
+  def summary_hash
     {
       title: title,
       path: path
     }
+  end
+
+  def details_hash
+    summary_hash.merge({
+      id: youtube_id,
+      twitter: twitter,
+      prev: prev_film.path,
+      next: next_film.path,
+      links: links
+    })
   end
 end
