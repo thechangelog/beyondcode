@@ -2,7 +2,7 @@
 <% content_for :description, "An interview with #{episode.title} at #{episode.season.title}. A Changelog Films production."%>
 <% content_for :pull_image, "http://beyondcode.tv/#{episode.image_path}" %>
 
-<article id="single" class="episode" data-id="<%= episode.youtube_id %>" data-prev="<%= episode.prev.path %>" data-next="<%= episode.next.path %>"
+<article id="single" class="episode" data-id="<%= episode.youtube_id %>" data-prev="<%= episode.prev_path %>" data-next="<%= episode.next_path %>"
 >
   <div class="embed-wrapper">
     <div id="player"></div>

@@ -42,14 +42,14 @@
 </ol>
 
 <section class="ctas">
-  <% if season.prev %>
-    <%= partial "cta", locals: {season: season.prev} %>
+  <% if season.prev_film %>
+    <%= partial "cta", locals: {season: season.prev_film} %>
   <% else %>
     <%= partial "cta_all" %>
   <% end %>
 
-  <% if season.next %>
-    <%= partial "cta", locals: {season: season.next} %>
+  <% if season.next_film %>
+    <%= partial "cta", locals: {season: season.next_film} %>
   <% else %>
     <%= partial "cta_all" %>
   <% end %>

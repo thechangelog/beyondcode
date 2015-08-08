@@ -8,27 +8,27 @@ seasons = Season.published app.data
 
 seasons.each_with_index do |season, index|
   if index == 0
-    season.prev = nil
+    season.prev_film = nil
   else
-    season.prev = seasons[index-1]
+    season.prev_film = seasons[index-1]
   end
 
   if index == seasons.length
-    season.next = nil
+    season.next_film = nil
   else
-    season.next = seasons[index+1]
+    season.next_film = seasons[index+1]
   end
 
   proxy season.path, "season.html", locals: {season: season}
 
   season.episodes.each_with_index do |episode, index|
     # no beginning-of-array check here because we loop around
-    episode.prev = season.episodes[index-1]
+    episode.prev_film = season.episodes[index-1]
 
     if index == season.episodes.length
-      episode.next = season.episodes.first
+      episode.next_film = season.episodes.first
     else
-      episode.next = season.episodes[index+1]
+      episode.next_film = season.episodes[index+1]
     end
 
     proxy episode.path, "single.html", locals: {episode: episode}

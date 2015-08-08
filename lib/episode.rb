@@ -14,6 +14,13 @@ class Episode < Film
   end
 
   def as_json *args
+  def prev_path
+    prev_film.path if prev_film
+  end
+
+  def next_path
+    next_film.path if next_film
+  end
     {
       title: title,
       path: path

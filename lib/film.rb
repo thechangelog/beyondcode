@@ -1,5 +1,5 @@
 class Film
-  attr_accessor :prev, :next
+  attr_accessor :prev_film, :next_film
   attr_reader :season
 
   def initialize data, season
