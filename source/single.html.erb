@@ -1,8 +1,8 @@
-<% content_for :title, "Beyond Code Season #{season.number}: #{season.title} – #{episode.title}" %>
-<% content_for :description, "An interview with #{episode.title} at #{season.title}. A Changelog Films production."%>
+<% content_for :title, "Beyond Code Season #{episode.season.number}: #{episode.season.title} – #{episode.title}" %>
+<% content_for :description, "An interview with #{episode.title} at #{episode.season.title}. A Changelog Films production."%>
 <% content_for :pull_image, "http://beyondcode.tv/#{episode.image_path}" %>
 
-<article id="single" class="episode" data-id="<%= episode.youtube_id %>" data-prev="<%= prev_episode.path %>" data-next="<%= next_episode.path %>"
+<article id="single" class="episode" data-id="<%= episode.youtube_id %>" data-prev="<%= episode.prev.path %>" data-next="<%= episode.next.path %>"
 >
   <div class="embed-wrapper">
     <div id="player"></div>
@@ -14,7 +14,11 @@
     <div class="episode_info-wrap">
       <div class="episode_info-meta">
         <h2><%= link_to episode.title, episode.path %></h2>
-        <p class="episode-twitter_link"><%= link_to "@#{episode.twitter}", "http://twitter.com/#{episode.twitter}" %></p>
+        <% if episode.twitter %>
+          <p class="episode-twitter_link">
+            <%= link_to "@#{episode.twitter}", "https://twitter.com/#{episode.twitter}" %>
+          </p>
+        <% end %>
       </div>
       <div class="episode_info-links">
         <% episode.links.each do |link| %>
@@ -26,6 +30,6 @@
 </article>
 
 <section class="ctas">
-  <%= partial "cta", locals: {season: season} %>
+  <%= partial "cta", locals: {season: episode.season} %>
   <%= partial "cta_all" %>
 </section>
