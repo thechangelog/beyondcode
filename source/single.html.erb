@@ -2,7 +2,28 @@
 <% content_for :description, "An interview with #{episode.title} at #{season.title}. A Changelog Films production."%>
 <% content_for :pull_image, "http://beyondcode.tv/#{episode.image_path}" %>
 
-<%= partial "episode", locals: {episode: episode, parent: "single"} %>
+<article id="single" class="episode" data-id="<%= episode.youtube_id %>" data-prev="<%= prev_episode.path %>" data-next="<%= next_episode.path %>"
+>
+  <div class="embed-wrapper">
+    <div id="player"></div>
+  </div>
+
+  <%= partial "sponsors", locals: {season: episode.season} %>
+
+  <div class="episode_info">
+    <div class="episode_info-wrap">
+      <div class="episode_info-meta">
+        <h2><%= link_to episode.title, episode.path %></h2>
+        <p class="episode-twitter_link"><%= link_to "@#{episode.twitter}", "http://twitter.com/#{episode.twitter}" %></p>
+      </div>
+      <div class="episode_info-links">
+        <% episode.links.each do |link| %>
+          <%= link_to link.title, link.url %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</article>
 
 <section class="ctas">
   <%= partial "cta", locals: {season: season} %>
