@@ -1,6 +1,7 @@
 //= require vanilla-modal
 //= require layzrjs/dist/layzr.min.js
 //= require single
+//= require season
 
 window.BC = {
   init: function() {
@@ -20,18 +21,18 @@ window.BC = {
       }
     });
 
-    this[template]();
+    this[template + "Init"]();
   },
 
-  index: function() {
-    // nothing yet
+  indexInit: function() {
+    // noop
   },
 
-  season: function() {
-    this.modal = new VanillaModal();
+  seasonInit: function() {
+    this.season = new Season();
   },
 
-  single: function() {
+  singleInit: function() {
     this.single = new Single();
   },
 
