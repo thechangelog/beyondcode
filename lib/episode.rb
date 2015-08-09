@@ -13,6 +13,10 @@ class Episode < Film
     @data.title.downcase.gsub " ", "-"
   end
 
+  def html_title
+    "#{season.html_title} – #{title}"
+  end
+
   def prev_path
     prev_film.path if prev_film
   end
@@ -32,6 +36,7 @@ class Episode < Film
     summary_hash.merge({
       id: youtube_id,
       twitter: twitter,
+      html_title: html_title,
       prev: prev_film.path,
       next: next_film.path,
       links: links

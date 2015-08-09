@@ -30,6 +30,10 @@ class Season < Film
     @filmed_on ||= Date.parse @data.filmed_on
   end
 
+  def html_title
+    "Beyond Code Season #{number}: #{title}"
+  end
+
   def image_path
     "/images/season-#{number}/banner.jpg"
   end
@@ -65,5 +69,4 @@ class Season < Film
   def year
     filmed_on.year
   end
-
 end
