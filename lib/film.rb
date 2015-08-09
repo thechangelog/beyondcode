@@ -7,6 +7,10 @@ class Film
     @season = season
   end
 
+  def links
+    @data.links.map &:to_h
+  end
+
   def path
     "/#{slug}"
   end
