@@ -37,8 +37,8 @@ class Episode < Film
       id: youtube_id,
       twitter: twitter,
       html_title: html_title,
-      prev: prev_film.path,
-      next: next_film.path,
+      prev: prev_path,
+      next: next_path,
       links: links
     })
   end
