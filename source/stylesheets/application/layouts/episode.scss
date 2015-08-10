@@ -1,3 +1,7 @@
+.embed-wrapper {
+  border-bottom: 1px solid $base-border-color;
+}
+
 .episode_info {
   background: $black;
   border-top: 1px solid $base-border-color;
@@ -9,16 +13,12 @@
 
   &-wrap {
     @include clearfix;
-    padding: $gutter $gutter*2 $gutter*2;
-
-    @include media($small-screen) {
-      padding: $gutter $gutter $gutter*2;
-    }
+    padding: $gutter 0;
   }
 
   &-meta,
-  &-links {
-    float: left;
+  &-controls {
+    float: right;
     width: 50%;
 
     @include media($small-screen) {
@@ -28,13 +28,49 @@
   }
 
   &-meta {
-    h2 {
-      font-size: 3em;
+    padding: 0 $gutter 0 $gutter*2;
+
+    @include media($small-screen) {
+      padding: 0 $gutter;
     }
   }
 
-  &-links {
-    @extend %subtle-text;
+  &-controls {
+    &-prev,
+    &-next,
+    &-play {
+      @include size(33.3333% 90px);
+      @include transition(opacity .2s $ease-in-out-quint);
+      background: center no-repeat;
+      cursor: pointer;
+      display: block;
+      float: left;
+      margin: $gutter 0;
+      text-indent: -9999px;
+
+      &:hover { opacity: .6; }
+      &.is-disabled { opacity: .4 !important; }
+    }
+
+    &-next { background-image: url("/images/controls-next.png"); }
+    &-prev { background-image: url("/images/controls-prev.png"); }
+    &-play {
+      background-image: url("/images/controls-pause.png");
+      &.is-paused {
+        background-image: url("/images/controls-play.png");
+      }
+    }
+  }
+
+  &-meta {
+    h2 {
+      font-size: 3em;
+    }
+
+    &-links {
+      @extend %subtle-text;
+      font-size: .9em;
+    }
   }
 }
 

@@ -9,7 +9,7 @@
     <h2><%= season.location %> (<%= season.year %>)</h2>
     <% if season.has_episodes? %>
       <div class="season-banner-play">
-        <a href="#modal-1" title="View Season Trailer" class="season-banner-play-icon" rel="modal:open">Play All</a>
+        <a href="#modal" title="Play All Episodes" class="season-banner-play-icon" rel="modal:open">Play All</a>
         <h3>
           <a id="all" data-first="<%= season.episodes.first.path %>" href="#modal" title="Play All Videos" rel="modal:open">Play All</a>
         </h3>

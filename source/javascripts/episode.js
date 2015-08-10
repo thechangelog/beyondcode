@@ -13,7 +13,14 @@ function Episode(elementIdOrObject) {
 }
 
 Episode.prototype.infoHtml = function() {
-  var html = "<div class='episode_info-meta'>";
+
+  var html = "<div class='episode_info-controls'>";
+  html += "<a href='#' title='Previous Episode' class='episode_info-controls-prev'>Previous</a>";
+  html += "<a href='#' title='Play Episode' class='episode_info-controls-play'>Play</a>";
+  html += "<a href='#' title='Next Episode' class='episode_info-controls-next'>Next</a>";
+  html += "</div>";
+
+  html += "<div class='episode_info-meta'>";
   html += "<h2><a href='" + this.path + "'>" + this.title + "</a></h2>";
 
   if (this.twitter) {
@@ -22,15 +29,13 @@ Episode.prototype.infoHtml = function() {
     html += "</p>";
   }
 
-  html += "</div>";
-
-  html += "<div class='episode_info-links'>";
+  html += "<ul class='episode_info-meta-links'>";
 
   for (var i = 0; i < this.links.length; i++) {
-    html += "<a href='" + this.links[i].url + "'>" + this.links[i].title + "</a>";
+    html += "<li><a href='" + this.links[i].url + "'>" + this.links[i].title + "</a></li>";
   }
 
-  html += "</div>";
+  html += "</ul></div>";
 
   return html;
 }

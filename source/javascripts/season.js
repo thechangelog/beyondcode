@@ -43,8 +43,6 @@ Season.prototype = {
   },
 
   playTrailer: function(event) {
-    this.episodeInfo.innerHTML = "<h2>Trailer</h2>";
-
     this.player = new YT.Player("player", {
       videoId: this.trailer.id,
       playerVars: {
