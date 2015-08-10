@@ -52,12 +52,12 @@
       &.is-disabled { opacity: .4 !important; }
     }
 
-    &-next { background-image: url("/images/controls-next.png"); }
-    &-prev { background-image: url("/images/controls-prev.png"); }
+    &-next { @include retina-image(/images/controls-next, 32px 32px); }
+    &-prev { @include retina-image(/images/controls-prev, 32px 32px); }
     &-play {
-      background-image: url("/images/controls-pause.png");
+      @include retina-image(/images/controls-pause, 55px 60px);
       &.is-paused {
-        background-image: url("/images/controls-play.png");
+        @include retina-image(/images/controls-play, 55px 60px);
       }
     }
   }
