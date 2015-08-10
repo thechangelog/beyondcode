@@ -22,6 +22,14 @@ class Season < Film
     @episodes ||= @data.episodes.map { |e| Episode.new e, self }
   end
 
+  def has_episodes?
+    episodes.any?
+  end
+
+  def has_trailer?
+    youtube_id.present?
+  end
+
   def extras
     @extras ||= @data.extras.map { |e| Extra.new e, self }
   end

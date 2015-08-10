@@ -8,16 +8,17 @@ function Single() {
 
   BC.loadYouTube(function() {
     self.player = new YT.Player("player", {
-      height: "560",
-      width: "315",
       videoId: self.episode.id,
       playerVars: {
         showinfo: 0,
-        autoplay: 0
+        autoplay: 1
       },
       events: {
-        "onReady": self.playerReady,
-        "onStateChange": self.playerStateChange
+        "onStateChange": function(event) {
+          if (event.data === 0) {
+            self.nextEpisode();
+          }
+        }
       }
     })
   });
@@ -61,15 +62,5 @@ Single.prototype = {
         history.pushState(null, self.episode.html_title, self.episode.path);
         self.player.loadVideoById(self.episode.id);
       })
-  },
-
-  playerReady: function() {
-
-  },
-
-  playerStateChange: function(event) {
-    if (event.data === 0) {
-      this.nextEpisode();
-    }
   }
 }

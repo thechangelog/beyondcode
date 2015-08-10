@@ -7,11 +7,17 @@
     <p class="season-number"><%= season.number_with_padding %></p>
     <h1><%= season.title %></h1>
     <h2><%= season.location %> (<%= season.year %>)</h2>
-    <% if season.episodes.any? %>
+    <% if season.has_episodes? %>
       <div class="season-banner-play">
         <a href="#modal-1" title="View Season Trailer" class="season-banner-play-icon" rel="modal:open">Play All</a>
-        <h3><a href="#modal-1" title="Play All Videos" rel="modal:open">Play All</a></h3>
-        <p><a href="#modal-1" title="View Season Trailer" rel="modal:open">or View Trailer</a></p>
+        <h3>
+          <a id="all" data-first="<%= season.episodes.first.path %>" href="#modal" title="Play All Videos" rel="modal:open">Play All</a>
+        </h3>
+        <% if season.has_trailer? %>
+          <p>
+            <a id="trailer" data-id="<%= season.youtube_id %>" href="#modal" title="View Season Trailer" rel="modal:open">or View Trailer</a>
+          </p>
+        <% end %>
       </div>
     <% else %>
       <div class="season-banner-play season-banner-play--soon">
@@ -21,9 +27,16 @@
   </header>
 </div>
 
-<% if season.episodes.any? %>
-  <div id="modal-1" style="display:none;"></div>
-<% end %>
+<div id="modal" style="display:none;">
+  <div class="embed-wrapper">
+    <div id="player"></div>
+  </div>
+
+  <div class="episode_info">
+    <div id="single-info" class="episode_info-wrap">
+    </div>
+  </div>
+</div>
 
 <%= partial "sponsors", locals: {season: season} %>
 
