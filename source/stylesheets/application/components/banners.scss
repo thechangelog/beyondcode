@@ -104,8 +104,10 @@
 
       &-icon {
         @include position(absolute, 50% null null 0);
+        @include retina-image(/images/play, 63px 81px); 
         @include size(63px 81px);
-        background: url("/images/play.png") center no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
         background-size: 63px 81px;
         display: block;
         margin-top: -40px;
