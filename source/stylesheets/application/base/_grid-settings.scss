@@ -23,4 +23,5 @@ $medium-screen-down: new-breakpoint(max-width $large-screen-size 4);
 $large-screen-up: new-breakpoint(min-width $large-screen-size 12);
 $huge-screen-up: new-breakpoint(min-width $huge-screen-size 12);
 
-$short-screen: new-breakpoint(max-height 350px);
+$small-height-screen: new-breakpoint(max-height 600px);
+$medium-height-screen: new-breakpoint(max-height 800px);
