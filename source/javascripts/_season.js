@@ -1,4 +1,4 @@
-//= require extra
+//= require _extra
 
 function Season() {
   BC.loadYouTube();

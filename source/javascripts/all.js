@@ -1,7 +1,9 @@
-//= require vanilla-modal
-//= require layzrjs/dist/layzr.min.js
-//= require single
-//= require season
+//= require vendor/_vanilla-modal
+//= require vendor/_layzr
+//= require vendor/_promise
+//= require vendor/_fetch
+//= require _single
+//= require _season
 
 window.BC = {
   init: function() {

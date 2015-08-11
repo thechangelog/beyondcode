@@ -1,4 +1,4 @@
-//= require episode
+//= require _episode
 
 function Single() {
   this.episode = new Episode("single");

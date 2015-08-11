@@ -2,8 +2,6 @@ require_relative "lib/season"
 require_relative "lib/episode"
 require_relative "lib/extra"
 
-sprockets.append_path File.join "#{root}", "bower_components"
-
 seasons = Season.published app.data
 
 seasons.each_with_index do |season, index|
