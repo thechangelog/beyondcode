@@ -18,7 +18,7 @@ Episode.prototype.infoHtml = function() {
 
   if (this.twitter) {
     html += "<p class='episode-twitter_link'>";
-    html += "<a href='https://twitter.com/" + this.twitter + ">@" + this.twitter + "</a>";
+    html += "<a href='https://twitter.com/" + this.twitter + "'>@" + this.twitter + "</a>";
     html += "</p>";
   }
 
