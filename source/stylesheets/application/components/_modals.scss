@@ -74,11 +74,11 @@ body.vanilla-modal {
   }
 
   @include media($medium-height-screen) {
-    .embed-wrapper { padding-bottom: 40%; }
+    .embed-wrapper { padding-bottom: 45%; }
   }
 
   @include media($small-height-screen) {
-    .embed-wrapper { padding-bottom: 30%; }
+    .embed-wrapper { padding-bottom: 35%; }
   }
 
   .modal-visible & {
