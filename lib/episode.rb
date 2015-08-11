@@ -42,4 +42,12 @@ class Episode < Film
       links: links
     })
   end
+
+  def twitter_url
+    "https://twitter.com/#{twitter}"
+  end
+
+  def youtube_url
+    "https://www.youtube.com/watch?v=#{youtube_id}"
+  end
 end

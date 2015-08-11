@@ -17,10 +17,11 @@
         <h2><%= link_to episode.title, episode.path %></h2>
         <% if episode.twitter %>
           <p class="episode-twitter_link">
-            <%= link_to "@#{episode.twitter}", "https://twitter.com/#{episode.twitter}" %>
+            <%= link_to "@#{episode.twitter}", episode.twitter_url %>
           </p>
         <% end %>
         <ul class="episode_info-meta-links">
+          <li><%= link_to "Watch on YouTube", episode.youtube_url %></li>
           <% episode.links.each do |link| %>
             <li><%= link_to link["title"], link["url"] %></li>
           <% end %>

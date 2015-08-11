@@ -18,11 +18,12 @@ Episode.prototype.infoHtml = function() {
 
   if (this.twitter) {
     html += "<p class='episode-twitter_link'>";
-    html += "<a href='https://twitter.com/'" + this.twitter + ">@" + this.twitter + "</a>";
+    html += "<a href='https://twitter.com/" + this.twitter + ">@" + this.twitter + "</a>";
     html += "</p>";
   }
 
   html += "<ul class='episode_info-meta-links'>";
+  html += "<li><a href='https://www.youtube.com/watch?v=" + this.id + "'>Watch on YouTube</a></li>";
 
   for (var i = 0; i < this.links.length; i++) {
     html += "<li><a href='" + this.links[i].url + "'>" + this.links[i].title + "</a></li>";
