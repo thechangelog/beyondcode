@@ -3,6 +3,9 @@
 function Single() {
   this.episode = new Episode("single");
   this.episodeInfo = document.getElementById("single-info");
+  this.prevButton = document.getElementById("player-control-prev");
+  this.nextButton = document.getElementById("player-control-next");
+  this.playButton = document.getElementById("player-control-play");
 
   var self = this;
 
@@ -15,16 +18,47 @@ function Single() {
       },
       events: {
         "onStateChange": function(event) {
-          if (event.data === 0) {
-            self.nextEpisode();
+          switch(event.data) {
+            case 0:
+              self.nextEpisode();
+              break;
+            case 1:
+              self.playButton.className = "episode_info-controls-play";
+              break;
+            case 2:
+              self.playButton.className = "episode_info-controls-play is-paused";
+              break;
           }
         }
       }
     })
   });
+
+  this.prevButton.onclick = function(event) {
+    event.preventDefault();
+    self.prevEpisode();
+  }
+
+  this.nextButton.onclick = function(event) {
+    event.preventDefault();
+    self.nextEpisode();
+  }
+
+  this.playButton.onclick = function(event) {
+    event.preventDefault();
+    self.playPauseEpisode();
+  }
 }
 
 Single.prototype = {
+  playPauseEpisode: function() {
+    if (this.player.getPlayerState() === 1) {
+      this.player.pauseVideo();
+    } else {
+      this.player.playVideo();
+    }
+  },
+
   prevEpisode: function() {
     if (!this.episode.prev) {
       return false
