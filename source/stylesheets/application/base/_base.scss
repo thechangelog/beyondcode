@@ -4,38 +4,41 @@
 // MIT License
 
 // Resets
-@import 'normalize';
+@import "normalize";
 
 // Fixes (These will become obsolete)
-@import 'fixes';
+@import "fixes";
+
+// Fonts
+@import "fonts";
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Neat Settings
-@import 'grid-settings';
+@import "grid-settings";
 
 // Global Classes
-@import 'classes';
+@import "classes";
 
 // Extends
-@import 'extends/button';
-@import 'extends/clearfix';
-@import 'extends/errors';
-@import 'extends/flashes';
-@import 'extends/hide-text';
-@import 'extends/inputs';
+@import "extends/button";
+@import "extends/clearfix";
+@import "extends/errors";
+@import "extends/flashes";
+@import "extends/hide-text";
+@import "extends/inputs";
 
 // Typography and Elements
-@import 'typography';
-@import 'forms';
-@import 'forms-select';
-@import 'tables';
-@import 'lists';
-@import 'buttons';
+@import "typography";
+@import "forms";
+@import "forms-select";
+@import "tables";
+@import "lists";
+@import "buttons";
 
 // Modifiers
-@import 'modifiers';
+@import "modifiers";
 
 // Keyframe Animations
-@import 'keyframes';
+@import "keyframes";

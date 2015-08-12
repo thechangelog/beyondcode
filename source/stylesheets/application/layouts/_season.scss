@@ -30,13 +30,12 @@
 
     &:after {
       @include position(absolute, 20px 20px null null);
-      @include retina-image(/images/play-small, 63px 81px);
+      @include retina-image(/images/play-small, 20px 28px);
       @include size(25px 33px);
       @include transform(translateY(3px));
       @include transition(all .2s $ease-in-out-quint .2s);
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 20px 28px;
       content: "";
       display: block;
       opacity: 0;
