@@ -17,7 +17,7 @@ seasons.each_with_index do |season, index|
     season.next_film = seasons[index+1]
   end
 
-  proxy season.path, "season.html", locals: {season: season}, ignore: true
+  proxy "#{season.path}/index.html", "season.html", locals: {season: season}, ignore: true
 
   season.episodes.each_with_index do |episode, index|
     # no beginning-of-array check here because we loop around
@@ -29,7 +29,7 @@ seasons.each_with_index do |season, index|
       episode.next_film = season.episodes[index+1]
     end
 
-    proxy episode.path, "single.html", locals: {episode: episode}, ignore: true
+    proxy "#{episode.path}/index.html", "single.html", locals: {episode: episode}, ignore: true
     proxy "#{episode.path}.json", "single.json", locals: {episode: episode}, ignore: true
   end
 end
