@@ -7,17 +7,11 @@
     background-repeat: no-repeat;
     border-bottom: 1px solid $base-border-color;
     overflow: hidden;
-    padding: $gutter*4 $gutter*2;
-    padding-left: $percentage;
+    padding: $gutter*4 $gutter*2 $gutter*4 $percentage;
     position: relative;
 
-    @include media($medium-screen-down) {
-      padding-left: 0;
-    }
-
-    @include media($small-screen) {
-      padding: $gutter*3 $gutter*2;
-    }
+    @include media($medium-screen-down) { padding-left: 0; }
+    @include media($small-screen) { padding: $gutter*3 $gutter*2; }
 
     &--large {
       padding: $gutter*6 $gutter*2;
@@ -44,9 +38,7 @@
       padding-right: $percentage;
       text-align: right;
 
-      @include media($medium-screen-down) {
-        padding-right: 0;
-      }
+      @include media($medium-screen-down) { padding-right: 0; }
 
       .season-number { @include position(absolute, 50% (-$gutter) null auto); }
 
@@ -98,13 +90,11 @@
         }
       }
 
-      &--soon h3 {
-        display: block !important;
-      }
+      &--soon h3 { display: block !important; }
 
       &-icon {
         @include position(absolute, 50% null null 0);
-        @include retina-image(/images/play, 63px 81px); 
+        @include retina-image(/images/play, 63px 81px);
         @include size(63px 81px);
         background-position: center;
         background-repeat: no-repeat;
@@ -119,9 +109,7 @@
         }
       }
 
-      h3 {
-        font-size: 2.5em;
-      }
+      h3 { font-size: 2.5em; }
 
       p {
         @extend %subtle-text;
@@ -133,11 +121,16 @@
 
   &-number {
     @include position(absolute, 50% null null (-$gutter));
+    @include transition(color .3s $ease-in-out-quint);
     color: $dark-grey;
     font-family: $display;
     font-size: 244px;
     line-height: 1em;
     margin: -122px 0 0;
+
+    .season-banner:hover & {
+      color: lighten($dark-grey, 3%);
+    }
 
     @include media($medium-screen-down) {
       padding-right: 10%;
