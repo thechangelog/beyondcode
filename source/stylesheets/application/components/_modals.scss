@@ -81,6 +81,10 @@ body.vanilla-modal {
     .embed-wrapper { padding-bottom: 35%; }
   }
 
+  @include media($small-screen) {
+    .embed-wrapper { padding-bottom: 56.25% !important; }
+  }
+
   .modal-visible & {
     z-index: 100;
     opacity: 1;

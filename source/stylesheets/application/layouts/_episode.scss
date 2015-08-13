@@ -33,10 +33,8 @@
 
   &-meta {
     padding: 0 $gutter 0 $gutter*2;
-
-    @include media($small-screen) {
-      padding: 0 $gutter;
-    }
+    @include media($medium-screen-down) { padding: 0 $gutter; }
+    @include media($tiny-screen) { padding: 0 $gutter/2; }
   }
 
   &-controls {
@@ -52,8 +50,10 @@
       margin: $gutter/2 0;
       text-indent: -9999px;
 
-      @include media($small-screen) {
-        margin: $gutter/2 0;
+      @include media($small-screen) { margin: $gutter/2 0; }
+      @include media($tiny-screen) {
+        height: 50px;
+        margin: 0 0 $gutter/3;
       }
 
       &:hover { opacity: .6; }
@@ -68,11 +68,23 @@
         @include retina-image(/images/controls-play, 55px 60px);
       }
     }
+
+    @include media($tiny-screen) {
+      &-next { background-size: 16px 16px; }
+      &-prev { background-size: 16px 16px; }
+      &-play,
+      &-play.is-paused {
+         background-size: 28px 30px;
+      }
+    }
   }
 
   &-meta {
     h2 {
       font-size: 3em;
+      @include media($small-screen) { font-size: 2.5em; }
+      @include media($tiny-screen) { font-size: 2em; }
+
     }
 
     &-links {
