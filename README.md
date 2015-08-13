@@ -20,4 +20,4 @@ A [Changelog Films][films] production. [Check it][bc].
 [bc]: https://beyondcode.tv
 [films]: https://changelog.com/films
 [issues]: https://github.com/thechangelog/beyondcode/issues
-[license]: (https://github.com/thechangelog/beyondcode/blob/master/LICENSE)
+[license]: https://github.com/thechangelog/beyondcode/blob/master/LICENSE
