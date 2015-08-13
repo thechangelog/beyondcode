@@ -1,6 +1,6 @@
-# Beyond Code
+# [Beyond Code][bc]
 
-A [Changelog Films][films] production filmed at conference after parties.
+A [Changelog Films][films] production. [Check it][bc].
 
 ## Editing Episodes
 
@@ -17,6 +17,7 @@ A [Changelog Films][films] production filmed at conference after parties.
 
 [MIT][license]
 
+[bc]: https://beyondcode.tv
 [films]: https://changelog.com/films
 [issues]: https://github.com/thechangelog/beyondcode/issues
 [license]: (https://github.com/thechangelog/beyondcode/blob/master/LICENSE)
