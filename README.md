@@ -11,7 +11,7 @@ A [Changelog Films][films] production. [Check it][bc].
 
 1. `git clone git@github.com:thechangelog/beyondcode.git`
 2. `bundle`
-3. `rake serve` (or `middleman serve` if you're hacker)
+3. `rake server` (or `middleman serve` if you're hacker)
 
 ## License
 

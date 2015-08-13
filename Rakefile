@@ -41,7 +41,7 @@ task :deploy do
 end
 
 desc "Run middleman server"
-desc :server do
+task :server do
   puts "*** Middleman server go! ***"
   system "middleman server"
 end
