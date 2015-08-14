@@ -1,6 +1,6 @@
 <% content_for :title, episode.html_title %>
-<% content_for :description, "An interview with #{episode.title} at #{episode.season.title}. A Changelog Films production."%>
-<% content_for :pull_image, "http://beyondcode.tv/#{episode.image_path}" %>
+<% content_for :description, "An interview with #{episode.title} at #{episode.season.title}. A Changelog Films production." %>
+<% content_for :pull_image, "https://beyondcode.tv#{image_path(episode.image_path)}" %>
 
 <article id="single" class="episode" data-id="<%= episode.youtube_id %>" data-prev="<%= episode.prev_path %>" data-next="<%= episode.next_path %>"
 >

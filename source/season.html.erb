@@ -1,6 +1,6 @@
 <% content_for :title, season.html_title %>
 <% content_for :description, "Video interviews with #{season.title} attendees. A Changelog Films production." %>
-<% content_for :pull_image, "http://beyondcode.tv/images/season-#{season.number}/banner.jpg" %>
+<% content_for :pull_image, "https://beyondcode.tv#{image_path(season.image_path)}" %>
 
 <div class="season-banner season-banner--<%= season.number %> season-banner--large" data-src="<%= season.image_path %>" data-src-retina="<%= season.image_path_retina %>" data-src-bg>
   <header class="season-banner-header">
@@ -46,7 +46,7 @@
   <% season.episodes.each do |episode| %>
     <li class="episode_list-item">
       <a href="<%= episode.path %>" title="View Episode">
-        <img class="episode_list-item-image" src="/images/episode-blank.png" data-src="<%= episode.image_path %>" data-src-retina="<%= episode.image_path_retina %>" alt="<%= episode.title %>">
+        <img class="episode_list-item-image" src="<%= image_path "episode-blank.png" %>" data-src="<%= episode.image_path %>" data-src-retina="<%= episode.image_path_retina %>" alt="<%= episode.title %>">
         <div class="episode_list-item-info">
           <h2><%= episode.title %></h2>
           <p class="episode-twitter_link"><%= "@#{episode.twitter}" %></p>
