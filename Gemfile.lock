@@ -15,6 +15,8 @@ GEM
       thor
     celluloid (0.16.0)
       timers (~> 4.0.0)
+    cloudfront-invalidator (0.2.1)
+      ruby-hmac
     coderay (1.1.0)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
@@ -80,6 +82,7 @@ GEM
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    ruby-hmac (0.4.0)
     sass (3.4.16)
     slop (3.6.0)
     sprockets (2.12.4)
@@ -108,6 +111,7 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
+  cloudfront-invalidator
   dotenv
   middleman-cli (= 4.0.0.beta.2)
   middleman-core (= 4.0.0.beta.2)
