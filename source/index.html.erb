@@ -1,6 +1,6 @@
 <section class="seasons">
   <% Season.published(data).each do |season| %>
-    <article class="season-banner season-banner--<%= season.number %> season-banner--large" data-src="<%= season.image_path %>" data-src-retina="<%= season.image_path_retina %>" data-src-bg>
+    <article class="season-banner season-banner--<%= season.number %>" data-src="<%= season.image_path %>" data-src-retina="<%= season.image_path_retina %>" data-src-bg>
       <a class="season-banner-link" href="<%= season.path %>" title="View Season <%= season.number %>"></a>
       <header class="season-banner-header">
         <p class="season-number"><%= season.number_with_padding %></p>

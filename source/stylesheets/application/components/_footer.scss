@@ -1,10 +1,13 @@
-.site_footer {
+.footer,
+.about {
   @include clearfix;
   display: table;
   width: 100%;
 
   &-form,
-  &-copyright {
+  &-copyright,
+  &-tagline,
+  &-subscribe {
     display: table-cell;
 
     @include media($small-screen) {
@@ -13,13 +16,17 @@
     }
   }
 
-  &-form {
-    padding: $gutter*2 $gutter $gutter*2 $gutter*2;
+  &-form,
+  &-tagline {
     width: 70%;
 
     @include media($small-screen) {
       padding-left: $gutter;
     }
+  }
+
+  &-form {
+    padding: $gutter*2 $gutter $gutter*2 $gutter*2;
 
     h3 {
       font-size: 1.25em;
@@ -33,7 +40,16 @@
     }
   }
 
-  &-copyright {
+  &-tagline {
+    padding: $gutter*2;
+
+    @include media($medium-screen-down) {
+      padding: $gutter;
+    }
+  }
+
+  &-copyright,
+  &-subscribe {
     border-left: 1px solid $base-border-color;
     padding: $gutter;
     position: relative;
@@ -45,6 +61,7 @@
       @include size(20px 1px);
       border-bottom: 1px solid $base-border-color;
       content: "";
+
       @include media($small-screen) {
         content: none;
       }
@@ -54,6 +71,9 @@
       border-left: 0;
       border-top: 1px solid $base-border-color;
     }
+  }
+
+  &-copyright {
 
     p {
       font-size: .9em;
