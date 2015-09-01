@@ -33,8 +33,6 @@
     }
   }
 
-  &-form,
-  &-copyright,
   &-tagline,
   &-subscribe {
     display: table-cell;
@@ -45,39 +43,14 @@
     }
   }
 
-  &-form,
-  &-tagline {
-    width: 70%;
-
-    @include media($small-screen) {
-      padding-left: $gutter;
-    }
-  }
-
-  &-form {
-    padding: $gutter*2 $gutter $gutter*2 $gutter*2;
-
-    h3 {
-      font-size: 1.25em;
-      margin-bottom: 10px;
-    }
-
-    &-email[type=email] {
-      background: left center no-repeat;
-      @include retina-image(/images/email, 25px 20px);
-      padding-left: 40px;
-    }
-  }
-
   &-tagline {
     padding: $gutter*2;
+    width: 70%;
 
-    @include media($medium-screen-down) {
-      padding: $gutter;
-    }
+    @include media($medium-screen-down) { padding: $gutter; }
+    @include media($small-screen) { padding-left: $gutter; }
   }
 
-  &-copyright,
   &-subscribe {
     border-left: 1px solid $base-border-color;
     padding: $gutter;
@@ -102,24 +75,15 @@
     }
   }
 
-  &-copyright {
-    p {
-      font-size: .9em;
-      font-weight: 200;
-      margin: 0;
-      text-align: center;
-    }
-  }
-
   &-subscribe {
-    // border-color: $lighter-grey !important;
     padding-left: $gutter*2 !important;
 
-    @include media($medium-screen-down) {
-      padding-left: $gutter !important;
-    }
+    @include media($medium-screen-down) { padding-left: $gutter !important; }
 
-    h3 { font-size: 1.2em; }
+    h3 {
+      color: $white;
+      font-size: 1.2em;
+    }
 
     &-links {
       margin: $gutter/2 0 0;
@@ -129,7 +93,6 @@
       &-link {
         background-position: left center;
         background-repeat: no-repeat;
-        // color: $black;
         font-size: .9em;
         margin: 0;
         padding: 3px 0 5px 35px;
