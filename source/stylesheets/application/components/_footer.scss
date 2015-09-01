@@ -1,10 +1,40 @@
-.site_footer {
+.footer {
   @include clearfix;
+  color: $light-grey;
   display: table;
+  position: relative;
+  text-align: left;
   width: 100%;
 
-  &-form,
-  &-copyright {
+  &-tagline {
+    h1 {
+      font-size: 3em;
+      @include media($medium-screen-down) { font-size: 2.5em; }
+      @include media($tiny-screen) { font-size: 2em; }
+    }
+
+    h2 {
+      color: lighten($medium-grey, 30%);
+      font-family: $sans-serif;
+      font-size: 1.1em;
+      font-weight: 300;
+      letter-spacing: .1em;
+      margin-top: .25em;
+    }
+
+    &-copyright {
+      font-size: .7em;
+      margin: $gutter 0 0;
+
+      a {
+        color: $light-grey;
+        &:hover { color: lighten($medium-grey, 20%); }
+      }
+    }
+  }
+
+  &-tagline,
+  &-subscribe {
     display: table-cell;
 
     @include media($small-screen) {
@@ -13,27 +43,15 @@
     }
   }
 
-  &-form {
-    padding: $gutter*2 $gutter $gutter*2 $gutter*2;
+  &-tagline {
+    padding: $gutter*2;
     width: 70%;
 
-    @include media($small-screen) {
-      padding-left: $gutter;
-    }
-
-    h3 {
-      font-size: 1.25em;
-      margin-bottom: 10px;
-    }
-
-    &-email[type=email] {
-      background: left center no-repeat;
-      @include retina-image(/images/email, 25px 20px);
-      padding-left: 40px;
-    }
+    @include media($medium-screen-down) { padding: $gutter; }
+    @include media($small-screen) { padding-left: $gutter; }
   }
 
-  &-copyright {
+  &-subscribe {
     border-left: 1px solid $base-border-color;
     padding: $gutter;
     position: relative;
@@ -45,6 +63,7 @@
       @include size(20px 1px);
       border-bottom: 1px solid $base-border-color;
       content: "";
+
       @include media($small-screen) {
         content: none;
       }
@@ -54,12 +73,44 @@
       border-left: 0;
       border-top: 1px solid $base-border-color;
     }
+  }
 
-    p {
-      font-size: .9em;
-      font-weight: 200;
-      margin: 0;
-      text-align: center;
+  &-subscribe {
+    padding-left: $gutter*2 !important;
+
+    @include media($medium-screen-down) { padding-left: $gutter !important; }
+
+    h3 {
+      color: $white;
+      font-size: 1.2em;
+    }
+
+    &-links {
+      margin: $gutter/2 0 0;
+
+      li { margin: $gutter/3 0 0; }
+
+      &-link {
+        background-position: left center;
+        background-repeat: no-repeat;
+        font-size: .9em;
+        margin: 0;
+        padding: 3px 0 5px 35px;
+
+        &:hover { color: lighten($medium-grey, 20%); }
+
+        &--email { @include retina-image(/images/email, 25px 20px); }
+        &--youtube { @include retina-image(/images/youtube, 25px 20px); }
+      }
     }
   }
 }
+
+.gradient-1 { color: $light-grey; }
+.gradient-2 { color: lighten($light-grey, 5%); }
+.gradient-3 { color: lighten($light-grey, 10%); }
+.gradient-4 { color: lighten($light-grey, 15%); }
+.gradient-5 { color: $lighter-grey }
+.gradient-6 { color: lighten($lighter-grey, 3%); }
+.gradient-7 { color: lighten($lighter-grey, 6%); }
+.gradient-8 { color: lighten($lighter-grey, 9%); }

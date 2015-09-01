@@ -11,15 +11,15 @@
     position: relative;
 
     @include media($medium-screen-down) { padding-left: 0; }
-    @include media($small-screen) { padding: $gutter*3 $gutter*2; }
+    @include media($small-screen) { padding: $gutter*3 $gutter; }
 
     &--large {
       padding: $gutter*6 $gutter*2;
       padding-left: $percentage;
 
       @include media($medium-screen-down) {
-        padding: $gutter*4 $gutter*2;
-        padding-left: $gutter*2;
+        padding: $gutter*3 $gutter;
+        padding-left: $gutter;
       }
     }
 
@@ -43,7 +43,10 @@
       .season-number { @include position(absolute, 50% (-$gutter) null auto); }
 
       @include media($large-screen-up) {
-        .season-banner-play {@include position(absolute, 50% null null ($percentage + 5)); }
+        .season-banner-play,
+        .season-banner-coming_soon {
+          @include position(absolute, 50% null null ($percentage + 5));
+        }
       }
     }
 
@@ -69,11 +72,18 @@
       h2 { @extend %subtle-text; }
     }
 
+
     &-play {
+      @include media($large-screen-up) {
+        padding-left: 80px; // For the play icon
+      }
+    }
+
+    &-play,
+    &-coming_soon {
       @include media($large-screen-up) {
         @include position(absolute, 50% ($percentage + 5) null auto);
         @include transform(translateY(-50%));
-        padding-left: 80px;
         text-align: left;
         z-index: 3;
       }
@@ -110,6 +120,13 @@
       }
 
       h3 { font-size: 2.5em; }
+      h4 { font-size: 2.5em; }
+      h5 {
+        color: $light-grey;
+        font-size: 1em;
+        font-family: $sans-serif;
+        margin-top: 5px;
+      }
 
       p {
         @extend %subtle-text;

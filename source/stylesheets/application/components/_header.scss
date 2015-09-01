@@ -8,8 +8,10 @@
     text-align: center;
 
     h1 {
-      font-size: 3em;
+      font-size: 4em;
       letter-spacing: .025em;
+
+      @include media($small-screen) { font-size: 3em; }
 
       &,
       & a {
@@ -19,8 +21,10 @@
 
     h2 {
       color: $light-grey;
-      font-size: 1em;
+      font-size: 1.33em;
       letter-spacing: .11em;
+
+      @include media($small-screen) { font-size: 1em; }
     }
   }
 }
