@@ -46,7 +46,6 @@
         .season-banner-play,
         .season-banner-coming_soon {
           @include position(absolute, 50% null null ($percentage + 5));
-          padding-left: 80px;
         }
       }
     }
