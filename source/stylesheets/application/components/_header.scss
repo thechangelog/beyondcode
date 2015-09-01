@@ -11,6 +11,8 @@
       font-size: 4em;
       letter-spacing: .025em;
 
+      @include media($small-screen) { font-size: 3em; }
+
       &,
       & a {
         color: $black;
@@ -21,6 +23,8 @@
       color: $light-grey;
       font-size: 1.33em;
       letter-spacing: .11em;
+
+      @include media($small-screen) { font-size: 1em; }
     }
   }
 }
