@@ -74,12 +74,42 @@
   }
 
   &-copyright {
-
     p {
       font-size: .9em;
       font-weight: 200;
       margin: 0;
       text-align: center;
+    }
+  }
+
+  &-subscribe {
+    // border-color: $lighter-grey !important;
+    padding-left: $gutter*2 !important;
+
+    @include media($medium-screen-down) {
+      padding-left: $gutter !important;
+    }
+
+    h3 { font-size: 1.2em; }
+
+    &-links {
+      margin: $gutter/2 0 0;
+
+      li { margin: $gutter/3 0 0; }
+
+      &-link {
+        background-position: left center;
+        background-repeat: no-repeat;
+        // color: $black;
+        font-size: .9em;
+        margin: 0;
+        padding: 3px 0 5px 35px;
+
+        &:hover { color: lighten($medium-grey, 20%); }
+
+        &--email { @include retina-image(/images/email, 25px 20px); }
+        &--youtube { @include retina-image(/images/youtube, 25px 20px); }
+      }
     }
   }
 }

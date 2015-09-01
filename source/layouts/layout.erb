@@ -4,7 +4,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-    <link rel="shortcut icon" href="<%= image_path "favicon.ico" %>">
+    <link rel="shortcut icon" href="<%= image_path 'favicon.ico' %>">
 
     <title><%= yield_content(:title) || "Beyond Code" %></title>
     <meta content="<%= yield_content(:title) || "Beyond Code" %>" property="og:title">
@@ -12,7 +12,7 @@
     <meta name="description" content="<%= yield_content(:description) || "A Changelog Films Production" %>">
     <meta content="Beyond Code" property="og:site_name">
     <meta content="https://beyondcode.tv<%= current_page.url %>" property="og:url">
-    <meta content="<%= yield_content(:pull_image) || "https://beyondcode.tv#{image_path("share.jpg")}" %>" property="og:image">
+    <meta content="<%= yield_content(:pull_image) || "https://beyondcode.tv#{image_path('share.jpg')}" %>" property="og:image">
 
     <%= stylesheet_link_tag :site %>
   </head>
