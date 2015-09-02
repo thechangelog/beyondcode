@@ -1,12 +1,15 @@
-//= require _extra
-
 function Season() {
   BC.loadYouTube();
 
   var self = this;
 
-  this.trailer = new Extra("trailer");
+  this.trailer = document.getElementById("trailer");
   this.all = document.getElementById("all");
+
+  if (!this.trailer || !this.all) {
+    return;
+  }
+
   this.first = this.all.getAttribute("data-first");
   this.episodeInfo = document.getElementById("single-info");
   this.prevButton = document.getElementById("player-control-prev");
@@ -34,7 +37,7 @@ function Season() {
     self.playAll();
   }
 
-  this.trailer.el.onclick = function(event) {
+  this.trailer.onclick = function(event) {
     event.preventDefault();
     self.playTrailer();
   }
@@ -87,7 +90,7 @@ Season.prototype = {
   playTrailer: function(event) {
     this.episodeInfo.parentNode.style.display = "none";
     this.player = new YT.Player("player", {
-      videoId: this.trailer.id,
+      videoId: this.trailer.getAttribute("data-id"),
       playerVars: {
         showinfo: 0,
         autoplay: 1
