@@ -52,8 +52,12 @@ task :invalidate do
     abort "*** Could not find `cloudfront-invalidator` command ***"
   end
 
-  FileUtils.cd "build"
-  indexes = Dir["**/index.html"]
+  indexes = Dir["build/**/index.html"]
+    .map { |path| path.gsub "build", "" }
+    .map { |path|
+      # we need the indexes as well as the directories that contain them
+      [path, path.gsub("index.html", "")]
+    }.flatten
 
   cmd = [
     cfcmd,
