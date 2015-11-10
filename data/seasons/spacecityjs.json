@@ -3,12 +3,181 @@
   "title": "Space City JS",
   "location": "Houston, Texas",
   "filmed_on": "2015-03-28",
-  "published_on": "2015-07-06",
+  "published_on": "2015-11-09",
   "website_url": "http://spacecityjs.com",
-  "extras": [
-  ],
+  "youtube_id": "5OKRRPciEsI",
+  "extras": [],
   "sponsors": [
+    {
+      "name": "Codeship",
+      "url": "https://codeship.com/?utm_source=VideoPodcast&utm_medium=Link&utm_campaign=BeyondCode"
+    },
+    {
+      "name": "Toptal",
+      "url": "https://toptal.com"
+    }
   ],
   "episodes": [
+    {
+      "title": "Adrian Gonzales",
+      "twitter": "adgodev",
+      "youtube_id": "j2DAkjwitDs",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/adriangonzales"
+        }
+      ]
+    },
+    {
+      "title": "Amanda Shih",
+      "twitter": "pandafulmanda",
+      "youtube_id": "fWbU_gXcTog",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/pandafulmanda"
+        }
+      ]
+    },
+    {
+      "title": "Alan Lee",
+      "twitter": "juxta52",
+      "youtube_id": "QHHjo1MyWLo",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/juxta52"
+        }
+      ]
+    },
+    {
+      "title": "Astrid Countee",
+      "twitter": "ianthro",
+      "youtube_id": "D4MtzI3tGZ0",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/astridw"
+        }
+      ]
+    },
+    {
+      "title": "Chris Oakman",
+      "twitter": "4c4fc7",
+      "youtube_id": "hf22aNRSAWc",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/oakmac"
+        }
+      ]
+    },
+    {
+      "title": "Derick Bailey",
+      "twitter": "derickbailey",
+      "youtube_id": "xYvfKf3KvbE",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/derickbailey"
+        }
+      ]
+    },
+    {
+      "title": "Jeremy Wilken",
+      "twitter": "gnomeontherun",
+      "youtube_id": "xrG7L-ZfowM",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/gnomeontherun"
+        }
+      ]
+    },
+    {
+      "title": "John Brown",
+      "twitter": "thisisjohnbrown",
+      "youtube_id": "qTZrM85oQvk",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/thisisjohnbrown"
+        }
+      ]
+    },
+    {
+      "title": "Jonathan Birkholz",
+      "twitter": "rookieone",
+      "youtube_id": "R2tSHd3hJ9s",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/rookieone"
+        }
+      ]
+    },
+    {
+      "title": "Matt Keas",
+      "twitter": "matthiasak",
+      "youtube_id": "NAlfu31EyFA",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/matthiasak"
+        }
+      ]
+    },
+    {
+      "title": "Pawel Szymczykowski",
+      "twitter": "makenai",
+      "youtube_id": "gNcXTJn1qM8",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/makenai"
+        }
+      ]
+    },
+    {
+      "title": "Saul Maddox",
+      "twitter": "poeticninja",
+      "youtube_id": "qUa4G7mCq9U",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/poeticninja"
+        }
+      ]
+    },
+    {
+      "title": "Rafael Quijada",
+      "twitter": "ralphycue",
+      "youtube_id": "xOpGWsTMbis",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/firehawk09"
+        }
+      ]
+    },
+    {
+      "title": "Tom Green",
+      "twitter": "",
+      "youtube_id": "9gvtDe9-rTI",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/squareplanetdesign"
+        }
+      ]
+    },
+    {
+      "title": "Victoria Darrett",
+      "twitter": "",
+      "youtube_id": "6SXwR3W-Mpw",
+      "links": [
+      ]
+    }
   ]
 }
