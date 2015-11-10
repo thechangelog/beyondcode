@@ -6,7 +6,7 @@
   <header class="season-banner-header">
     <p class="season-number"><%= season.number_with_padding %></p>
     <h1><%= season.title %></h1>
-    <h2><%= season.location %> (<%= season.year %>)</h2>
+    <h2>Filmed in <%= season.location %> (<%= season.year %>)</h2>
     <% if season.has_episodes? %>
       <div class="season-banner-play">
         <a href="#modal" title="Play All Episodes" class="season-banner-play-icon" rel="modal:open" onclick="BC.season.all.click();">Play All</a>
