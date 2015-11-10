@@ -43,6 +43,10 @@ class Episode < Film
     })
   end
 
+  def twitter?
+    twitter.present?
+  end
+
   def twitter_url
     "https://twitter.com/#{twitter}"
   end

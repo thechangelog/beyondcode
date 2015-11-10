@@ -51,7 +51,13 @@
         <img class="episode_list-item-image" src="<%= image_path "episode-blank.png" %>" data-src="<%= episode.image_path %>" data-src-retina="<%= episode.image_path_retina %>" alt="<%= episode.title %>">
         <div class="episode_list-item-info">
           <h2><%= episode.title %></h2>
-          <p class="episode-twitter_link"><%= "@#{episode.twitter}" %></p>
+          <p class="episode-twitter_link">
+            <% if episode.twitter? %>
+              @<%= episode.twitter %>
+            <% else %>
+              &nbsp;
+            <% end %>
+          </p>
         </div>
       </a>
     </li>
