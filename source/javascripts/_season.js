@@ -1,6 +1,4 @@
 function Season() {
-  BC.loadYouTube();
-
   var self = this;
 
   this.trailer = document.getElementById("trailer");
@@ -56,6 +54,12 @@ function Season() {
     event.preventDefault();
     self.playPauseEpisode();
   }
+
+  BC.loadYouTube(function() {
+    if (location.hash === "#trailer") {
+      self.trailer.click();
+    }
+  });
 }
 
 Season.prototype = {
