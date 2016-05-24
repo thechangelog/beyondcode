@@ -8,7 +8,123 @@
   "extras": [
   ],
   "sponsors": [
+    {
+      "name": "Codeship",
+      "url": "https://codeship.com/?utm_source=VideoPodcast&utm_medium=Link&utm_campaign=BeyondCode"
+    },
+    {
+      "name": "Toptal",
+      "url": "https://toptal.com"
+    }
   ],
   "episodes": [
+    {
+      "title": "Amy Motta",
+      "twitter": "amy_motta",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Antoine Grondin",
+      "twitter": "AntoineGrondin",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Bartek Ciszkowski",
+      "twitter": "bartekci",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Beyang Liu",
+      "twitter": "beyang",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Brian Ketelsen",
+      "twitter": "bketelsen",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Brian Redbeard",
+      "twitter": "brianredbeard",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Bryan Liles",
+      "twitter": "bryanl",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Carlisia Campos",
+      "twitter": "carlisia",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Casey West",
+      "twitter": "caseywest",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Chris Manghane",
+      "twitter": "",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Chuck Rolek",
+      "twitter": "crolek",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Dieter Plaetinck",
+      "twitter": "Dieter_be",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Jake Ham",
+      "twitter": "",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Jeremy Breiding",
+      "twitter": "",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Mac Browning",
+      "twitter": "macb",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Mies Hernandez",
+      "twitter": "mies",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Peter Bourgon",
+      "twitter": "peterbourgon",
+      "youtube_id": "",
+      "links": []
+    },
+    {
+      "title": "Skye Berghel",
+      "twitter": "",
+      "youtube_id": "",
+      "links": []
+    }
   ]
 }
