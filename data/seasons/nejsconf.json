@@ -1,0 +1,137 @@
+{
+  "season_number": 4,
+  "title": "NEJS Conf",
+  "location": "Omaha, Nebraska",
+  "filmed_on": "2015-08-07",
+  "published_on": "2016-08-09",
+  "website_url": "https://nejsconf.com",
+  "youtube_id": "opJvhfyz-Fo",
+  "extras": [
+  ],
+  "sponsors": [
+    {
+      "name": "Codeship",
+      "url": "https://codeship.com/?utm_source=VideoPodcast&utm_medium=Link&utm_campaign=BeyondCode"
+    },
+    {
+      "name": "Toptal",
+      "url": "https://toptal.com"
+    }
+  ],
+  "episodes": [
+    {
+      "title": "Andrew Neely",
+      "twitter": "ravinglogic",
+      "youtube_id": "sJzZKAwIZ7M",
+      "links": []
+    },
+    {
+      "title": "Blaine Kasten",
+      "twitter": "blainekasten",
+      "youtube_id": "-O3PabTW7OI",
+      "links": []
+    },
+    {
+      "title": "Dylan Baumann",
+      "twitter": "dylanbaumann",
+      "youtube_id": "Qt1Yakx1mhg",
+      "links": []
+    },
+    {
+      "title": "Jason Wilson",
+      "twitter": "scurker",
+      "youtube_id": "2qcNOCAbv2I",
+      "links": []
+    },
+    {
+      "title": "John Hobbs",
+      "twitter": "jmhobbs",
+      "youtube_id": "_WweoMTCiU4",
+      "links": []
+    },
+    {
+      "title": "Kikki Beltz",
+      "twitter": "thesicksaddaria",
+      "youtube_id": "MHpcQZSV9lI",
+      "links": []
+    },
+    {
+      "title": "Mark Corrado",
+      "twitter": "markcorrado",
+      "youtube_id": "JLRirSOqNPs",
+      "links": []
+    },
+    {
+      "title": "Michael Freytag",
+      "twitter": "freytag",
+      "youtube_id": "fX60LGqBw34",
+      "links": []
+    },
+    {
+      "title": "Mike Macaulay",
+      "twitter": "mmacaula",
+      "youtube_id": "3j3hiEQkuQs",
+      "links": []
+    },
+    {
+      "title": "Mike Santo",
+      "twitter": "TheMikeSanto",
+      "youtube_id": "sJL_l_Gt0oM",
+      "links": []
+    },
+    {
+      "title": "Nathan Fryzek",
+      "twitter": "nfryzek",
+      "youtube_id": "lVCiTTeWbLw",
+      "links": []
+    },
+    {
+      "title": "Nicholas Wertzberger",
+      "twitter": "rannick",
+      "youtube_id": "kNMfutI5PcM",
+      "links": []
+    },
+    {
+      "title": "Nick Nisi",
+      "twitter": "nicknisi",
+      "youtube_id": "08V2FGz_tyo",
+      "links": []
+    },
+    {
+      "title": "Nicolas Bevacqua",
+      "twitter": "nzgb",
+      "youtube_id": "z-wCYkNyUyE",
+      "links": []
+    },
+    {
+      "title": "Pam Selle",
+      "twitter": "pamasaur",
+      "youtube_id": "8Mi9kasSy3Q",
+      "links": []
+    },
+    {
+      "title": "Sandi Barr",
+      "twitter": "sandikbarr",
+      "youtube_id": "_HH1GCwjqOQ",
+      "links": []
+    },
+    {
+      "title": "Travis Martensen",
+      "twitter": "tmartensen",
+      "youtube_id": "LkoVpgL82r8",
+      "links": []
+    },
+    {
+      "title": "William M. Riley",
+      "twitter": "bill_riley",
+      "youtube_id": "zBadBStxNZo",
+      "links": []
+    },
+    {
+      "title": "Zach Leatherman",
+      "twitter": "zachleat",
+      "youtube_id": "WokZgLqX_e8",
+      "links": []
+    }
+  ]
+}
