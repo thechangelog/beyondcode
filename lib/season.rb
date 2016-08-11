@@ -2,11 +2,11 @@ require_relative "film"
 
 class Season < Film
   def self.all data
-    data.seasons.keys.map { |k| Season.new k, data.seasons[k] }.sort
+    data.seasons.keys.map { |k| Season.new k, data.seasons[k] }.sort.to_a
   end
 
   def self.published data
-    all(data).select { |season| season.published? }
+    all(data).select(&:published?)
   end
 
   def initialize slug, data
